@@ -12,7 +12,7 @@ const clubs = [
 ]
 
 const coordinators = [
-  { name: 'Alice Johnson', photo: '/coordinators/alice.jpg', club: 'Coding Club' },
+  { name: 'Alice', photo: '/coordinators/alice.jpg', club: 'Coding Club' },
   { name: 'Bob Smith', photo: '/coordinators/bob.jpg', club: 'SAE Club' },
   { name: 'Charlie Brown', photo: '/coordinators/charlie.jpg', club: 'Robo-sapiens Club' },
   { name: 'Diana Prince', photo: '/coordinators/diana.jpg', club: 'Astriaza Club' },
