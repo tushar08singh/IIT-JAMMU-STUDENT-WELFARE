@@ -10,8 +10,10 @@ const Page = () => {
     { label: "Academic Council", href: "/Clubs/Academic" },
     { label: "Cultural Council", href: "/Clubs/Cultural" },
     { label: "Wellness Council", href: "/Clubs/Wellness" },
-    { label: "Sports Council", href: "/sports-council" },
+    { label: "Sports Council", href: "/Clubs/Sports" },
     { label: "Student Life", href: "/student-life" },
+    { label: "Announcements", href: "/announcements" },
+   // { label: "Past Events", href: "/past-events" },
   ];
 
   return (
@@ -29,34 +31,40 @@ const Page = () => {
             priority
           />
 
-          {/* Dark overlay for contrast */}
+          {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/40"></div>
 
-          {/* === Horizontal Navbar === */}
-          <nav className="absolute top-4 sm:top-6 left-1/2 -translate-x-1/2 flex justify-center items-center gap-6 sm:gap-8 md:gap-12 px-4 sm:px-6 py-3 rounded-full bg-white/10 backdrop-blur-md shadow-lg z-10 max-w-full">
-            {navItems.map((item, index) => (
-              <Link
-                key={index}
-                href={item.href}
-                className="text-white text-sm sm:text-base md:text-lg font-semibold hover:text-[#003f87] transition-colors duration-300 whitespace-nowrap"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          {/* === Horizontal Navbar (Always in one line, scrollable on small screens) === */}
+          <div className="absolute top-4 sm:top-6 left-1/2 -translate-x-1/2 w-[95%] sm:w-auto z-10">
+            <nav
+              className="
+                flex justify-center items-center gap-4 sm:gap-6 md:gap-10 
+                px-4 sm:px-6 py-3 rounded-full bg-white/10 backdrop-blur-md shadow-lg
+                overflow-x-auto scrollbar-hide whitespace-nowrap
+              "
+            >
+              {navItems.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className="text-white text-sm sm:text-base md:text-lg font-semibold hover:text-[#ffcc00] transition-colors duration-300"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
-          {/* Hero Text */}
+          {/* Hero Text (Optional placeholder) */}
           <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-10">
+            {/* Example: */}
             {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
               Office of Student Affairs
             </h1> */}
-            {/* <p className="text-sm sm:text-lg md:text-xl text-gray-200 mt-2 max-w-2xl">
-              IIT Jammu — Empowering Students for Leadership, Innovation, and Growth
-            </p> */}
           </div>
         </div>
 
-        {/* Page Content */}
+        {/* === Page Content === */}
         <section className="px-4 sm:px-8 md:px-16 py-10 sm:py-14 md:py-20 bg-white">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#003f87] mb-6">

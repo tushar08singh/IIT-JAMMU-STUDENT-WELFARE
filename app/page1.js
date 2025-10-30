@@ -1,31 +1,19 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { FiChevronDown } from "react-icons/fi"; // 👈 Icon for dropdown
 
 const Page = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   const navItems = [
-    { label: "Academic Council", href: "/academic-council" },
-    { label: "Cultural Council", href: "/cultural-council" },
-    { label: "Technical Council", href: "/technical-council" },
+    { label: "Academic Council", href: "/Clubs/Academic" },
+    { label: "Cultural Council", href: "/Clubs/Cultural" },
+    { label: "Wellness Council", href: "/Clubs/Wellness" },
     { label: "Sports Council", href: "/sports-council" },
+    { label: "Student Life", href: "/student-life" },
+    { label: "Announcements", href: "/announcements" },
+   // { label: "Past Events", href: "/past-events" },
   ];
 
   return (
@@ -34,7 +22,7 @@ const Page = () => {
 
       <main className="relative">
         {/* === Hero Image Section === */}
-        <div className="relative w-full h-[50vh] sm:h-[60vh] overflow-hidden">
+        <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[65vh] overflow-hidden">
           <Image
             className="object-cover w-full h-full"
             src="/mainiit.png"
@@ -43,97 +31,61 @@ const Page = () => {
             priority
           />
 
-          {/* Optional dark overlay */}
+          {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/40"></div>
 
-          {/* === Responsive Navigation Bar === */}
-          <nav className="absolute top-4 sm:top-6 left-1/2 transform -translate-x-1/2 flex flex-wrap sm:flex-nowrap justify-center items-center gap-4 sm:gap-8 md:gap-10 px-4 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full bg-white/10 backdrop-blur-md shadow-lg z-10 max-w-[95%] sm:max-w-fit">
-            {/* Clubs Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="text-white text-base sm:text-lg font-semibold hover:text-[#003f87] transition-colors duration-300 flex items-center gap-1"
-              >
-                <span>Clubs</span>
-                <FiChevronDown
-                  className={`text-white text-lg transition-transform duration-300 ${
-                    isDropdownOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                />
-              </button>
+          {/* === Horizontal Navbar (Always in one line, scrollable on small screens) === */}
+          <div className="absolute top-4 sm:top-6 left-1/2 -translate-x-1/2 w-[95%] sm:w-auto z-10">
+            <nav
+              className="
+                flex justify-center items-center gap-4 sm:gap-6 md:gap-10 
+                px-4 sm:px-6 py-3 rounded-full bg-white/10 backdrop-blur-md shadow-lg
+                overflow-x-auto scrollbar-hide whitespace-nowrap
+              "
+            >
+              {navItems.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className="text-white text-sm sm:text-base md:text-lg font-semibold hover:text-[#ffcc00] transition-colors duration-300"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
-              {/* Dropdown Menu */}
-              <div
-                className={`absolute left-1/2 -translate-x-1/2 mt-3 w-40 sm:w-48 bg-white/20 backdrop-blur-md rounded-xl shadow-lg border border-white/30 transition-all duration-200 ${
-                  isDropdownOpen
-                    ? "opacity-100 visible translate-y-0"
-                    : "opacity-0 invisible -translate-y-2"
-                }`}
-              >
-                <ul className="flex flex-col text-center py-2">
-                  <li>
-                    <Link
-                      href="/Clubs/Technical"
-                      className="block px-3 sm:px-4 py-2 text-white hover:bg-[#003f87]/70 hover:text-white rounded-md transition-all text-sm sm:text-base"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      Technical Club
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Clubs/Cultural"
-                      className="block px-3 sm:px-4 py-2 text-white hover:bg-[#003f87]/70 hover:text-white rounded-md transition-all text-sm sm:text-base"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      Cultural Club
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/Clubs/Sports"
-                      className="block px-3 sm:px-4 py-2 text-white hover:bg-[#003f87]/70 hover:text-white rounded-md transition-all text-sm sm:text-base"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      Sports Club
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Other Navigation Items */}
-            {navItems.map((item, index) => (
-              <Link
-                key={index}
-                href={item.href}
-                className="text-white text-base sm:text-lg font-semibold hover:text-[#003f87] transition-colors duration-300 whitespace-nowrap"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          {/* Hero Text (Optional placeholder) */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-10">
+            {/* Example: */}
+            {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+              Office of Student Affairs
+            </h1> */}
+          </div>
         </div>
 
-        {/* === Page Content Section === */}
-        <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-16 bg-white">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#003f87] mb-6 text-center">
-            Welcome to IIT Jammu Student Councils
-          </h1>
+        {/* === Page Content === */}
+        <section className="px-4 sm:px-8 md:px-16 py-10 sm:py-14 md:py-20 bg-white">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#003f87] mb-6">
+              Welcome to IIT Jammu Student Councils
+            </h2>
 
-          <p className="text-gray-700 leading-relaxed text-justify text-sm sm:text-base md:text-lg max-w-5xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            harum illum voluptatem quos sed sunt, eligendi aspernatur nulla
-            nisi! Tenetur, quasi enim. Sequi voluptatem odio ratione magni
-            nostrum, consequuntur expedita commodi dicta nesciunt voluptatibus
-            voluptates? Blanditiis possimus, voluptas rerum in ex optio sed ut
-            voluptatem laboriosam eligendi pariatur distinctio a qui voluptates
-            sapiente provident. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Mauris sit amet nibh id leo convallis feugiat.
-            Integer fringilla magna vel metus faucibus, a vestibulum purus
-            viverra.
-          </p>
-        </div>
+            <p className="text-gray-700 leading-relaxed text-justify text-sm sm:text-base md:text-lg max-w-5xl mx-auto">
+              The Student Affairs division at IIT Jammu fosters holistic development and
+              leadership among students through various councils and initiatives.
+              Each council is committed to nurturing excellence, creativity, and teamwork
+              while building a vibrant and inclusive campus community.
+            </p>
+
+            <p className="text-gray-700 leading-relaxed text-justify text-sm sm:text-base md:text-lg max-w-5xl mx-auto mt-6">
+              Whether it’s the Academic Council guiding educational policies, the Cultural
+              Council organizing vibrant festivals, the Technical Council driving innovation,
+              or the Sports Council promoting athletic spirit — every student finds an avenue
+              to explore, express, and excel at IIT Jammu.
+            </p>
+          </div>
+        </section>
       </main>
 
       <Footer />

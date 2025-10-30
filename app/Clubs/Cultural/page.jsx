@@ -1,8 +1,8 @@
 "use client";
 import React from 'react'
 import Image from 'next/image'
-import Header from '@/app/components/Header'
-import Footer from '@/app/components/Footer'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import { FaInstagram } from 'react-icons/fa'
 
 const clubs = [
@@ -11,7 +11,7 @@ const clubs = [
   { name: 'Dance Club', image: '/dance.jpg', link: 'https://www.instagram.com/beat_street.iitjmu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
   { name: 'Drama Club', image: '/drama.jpg', link: 'https://www.instagram.com/the_dramatizers_iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
   { name: 'Music Club', image: '/music.jpg', link: 'https://www.instagram.com/malang_iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { name: 'Fine Arts Club', image: '/fine arts.jpeg', link: 'https://www.instagram.com/finearts.iitjmu' },
+  { name: 'Fine Arts Club', image: '/artihc.jpg', link: 'https://www.instagram.com/artihc.iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
   { name: 'Anime Club', image: '/anime.jpg', link: 'https://www.instagram.com/anisoul_iitjmu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
   { name: 'Cooking Club', image: '/cooking.jpg', link: 'https://www.instagram.com/cookingclub.iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' }
 ]
