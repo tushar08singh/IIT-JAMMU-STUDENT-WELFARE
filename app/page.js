@@ -11,7 +11,7 @@ const Page = () => {
     { label: "Cultural Council", href: "/Clubs/Cultural" },
     { label: "Wellness Council", href: "/Clubs/Wellness" },
     { label: "Sports Council", href: "/Clubs/Sports" },
-    { label: "Student Life", href: "/student-life" },
+    { label: "Student Life", href: "/Student-Life" },
   ];
 
   return (
