@@ -13,7 +13,7 @@ const Page = () => {
     { label: "Sports Council", href: "/Clubs/Sports" },
     { label: "Student Life", href: "/Student-Life" },
     { label: "Announcements", href: "/announcements" },
-   // { label: "Past Events", href: "/past-events" },
+    // { label: "Past Events", href: "/past-events" },
   ];
 
   return (
@@ -34,33 +34,31 @@ const Page = () => {
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/40"></div>
 
-          {/* === Horizontal Navbar (Always in one line, scrollable on small screens) === */}
+          {/* === Horizontal Navbar === */}
           <div className="absolute top-4 sm:top-6 left-1/2 -translate-x-1/2 w-[95%] sm:w-auto z-10">
             <nav
               className="
-                flex justify-center items-center gap-4 sm:gap-6 md:gap-10 
-                px-4 sm:px-6 py-3 rounded-full bg-white/10 backdrop-blur-md shadow-lg
+                flex justify-start sm:justify-center items-center gap-3 sm:gap-6 md:gap-10 
+                px-3 sm:px-6 py-3 rounded-full bg-white/10 backdrop-blur-md shadow-lg
                 overflow-x-auto scrollbar-hide whitespace-nowrap
+                scroll-smooth
               "
             >
               {navItems.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="text-white text-sm sm:text-base md:text-lg font-semibold hover:text-[#ffcc00] transition-colors duration-300"
+                  className="
+                    text-white text-sm sm:text-base md:text-lg font-semibold 
+                    px-3 sm:px-4 py-1
+                    hover:text-[#ffcc00] transition-colors duration-300
+                    flex-shrink-0
+                  "
                 >
                   {item.label}
                 </Link>
               ))}
             </nav>
-          </div>
-
-          {/* Hero Text (Optional placeholder) */}
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-10">
-            {/* Example: */}
-            {/* <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
-              Office of Student Affairs
-            </h1> */}
           </div>
         </div>
 
