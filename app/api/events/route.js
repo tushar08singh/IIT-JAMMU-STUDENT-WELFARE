@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 //import { connectDB } from "@/lib/db";
 //import Event from "@/models/Event";
-import { connectDB } from "@/lib/db";
-import Event from "@/models/Event";
+import { connectDB } from "../../../lib/db";
+import Event from "../../../models/Event";
 
 // GET — Fetch all events
 export async function GET() {
