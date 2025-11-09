@@ -10,7 +10,7 @@ const Page = () => {
     { label: "Academic Council", href: "/Clubs/Academic" },
     { label: "Cultural Council", href: "/Clubs/Cultural" },
     { label: "Wellness Council", href: "/Clubs/Wellness" },
-    { label: "Sports Council", href: "/sports-council" },
+    { label: "Sports Council", href: "/Clubs/Sports" },
     { label: "Student Life", href: "/student-life" },
     { label: "Announcements", href: "/announcements" },
    // { label: "Past Events", href: "/past-events" },
