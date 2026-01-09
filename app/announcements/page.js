@@ -6,6 +6,8 @@ import EventCard from "../components/EventCard";
 
 const AnnouncementsPage = () => {
   const [events, setEvents] = useState([]);
+  const [upcoming, setUpcoming] = useState([]);
+  const [past, setPast] = useState([]);
 
   useEffect(() => {
     async function fetchEvents() {
@@ -16,9 +18,14 @@ const AnnouncementsPage = () => {
     fetchEvents();
   }, []);
 
-  const today = new Date();
-  const upcoming = events.filter((e) => new Date(e.date) >= today);
-  const past = events.filter((e) => new Date(e.date) < today);
+  if (events.length > 0) {
+    const today = new Date();
+    const upcoming = events.filter((e) => new Date(e.date) >= today);
+    const past = events.filter((e) => new Date(e.date) < today);
+
+    setUpcoming(upcoming);
+    setPast(past);
+  }
 
   return (
     <>
