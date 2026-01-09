@@ -22,7 +22,7 @@ const coordinators = [
   { name: 'Harsh kumar', photo: '/re4m coordinator.jpg', club: 'RE4M Club' },
   { name: 'Yaduraj Bhakar', photo: '/mesh coordinator.jpg', club: 'Mesh Club' },
   { name: 'Machavolu Venkata Siva Sai Subrahman', photo: '/ebsb coordinator.jpeg', club: 'EBSB Club' },
-  { name: 'Palak Aggarwal', photo: '/wellbeing coordinator.jpg', club: 'Wellbeing Club' }
+  { name: 'Palak Aggarwal', photo: 'https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941908/wellbeing_coordinator_yuazrx.jpg', club: 'Wellbeing Club' }
 ]
 
 const PICs = [

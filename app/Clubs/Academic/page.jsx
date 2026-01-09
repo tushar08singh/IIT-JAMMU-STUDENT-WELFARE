@@ -21,7 +21,7 @@ const coordinators = [
   
 ]
 const PICs = [
-  { name: 'Sumit Kumar Pandey', photo: '/PIC coding.jpg', club: 'Coding Club' },
+  { name: 'Sumit Kumar Pandey', photo: 'https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941883/PIC_coding_xylort.jpg', club: 'Coding Club' },
   { name: 'Dr. Arvind Kumar Rajput', photo: '/PIC sae.jpeg', club: 'SAE Club' },
   
   { name: 'Nalin Kumar Sharma', photo: '/PIC robotics.jpg', club: 'Robotics Club' },
