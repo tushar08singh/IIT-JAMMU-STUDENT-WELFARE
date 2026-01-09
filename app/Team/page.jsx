@@ -58,15 +58,15 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-80">
               <Image
-                src="/team/registrar.jpg"
-                alt="Academic Registrar"
+                src="/assistant registrar final.png"
+                alt="Assistant Registrar"
                 fill
                 className="object-cover"
               />
             </div>
             <div className="p-6 text-center">
               <h3 className="text-lg font-semibold text-[#0b3c7d]">
-                Academic Registrar
+                Assistant Registrar
               </h3>
               <p className="text-gray-600">Dr. PQR</p>
             </div>
@@ -87,7 +87,7 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-64">
               <Image
-                src="/general secretary.jpg"
+                src="/general secretary.jpeg"
                 alt="General Secretary"
                 fill
                 className="object-cover"
@@ -106,7 +106,7 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-64">
               <Image
-                src="/team/academic-secretary.jpg"
+                src="/academic secretary.jpg"
                 alt="Academic Secretary"
                 fill
                 className="object-cover"
@@ -125,7 +125,7 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-64">
               <Image
-                src="/team/cultural-secretary.jpg"
+                src="/cultural secretary.jpeg"
                 alt="Cultural Secretary"
                 fill
                 className="object-cover"
@@ -144,7 +144,7 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-64">
               <Image
-                src="/team/sports-secretary.jpg"
+                src="/sports secretary.jpeg"
                 alt="Sports Secretary"
                 fill
                 className="object-cover"
@@ -163,7 +163,7 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-64">
               <Image
-                src="/team/wellness-secretary.jpg"
+                src="/wellness secretary.png"
                 alt="Wellness Secretary"
                 fill
                 className="object-cover"
@@ -182,7 +182,7 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-64">
               <Image
-                src="/team/Mess-secretary.jpg"
+                src="/mess secretary.jpg"
                 alt="Mess Secretary"
                 fill
                 className="object-cover"
@@ -201,7 +201,7 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-64">
               <Image
-                src="/team/hostel-secretary.jpg"
+                src="/hostel secretary boys.jpeg"
                 alt="Hostel Affairs Secretary"
                 fill
                 className="object-cover"
@@ -209,10 +209,46 @@ export default function TeamPage() {
             </div>
             <div className="p-5 text-center">
               <h3 className="font-semibold text-[#0b3c7d]">
-                Hostel Affairs Secretary
+                Hostel Affairs Secretary (Boys)
               </h3>
               <p className="text-lg font-bold text-[#0b3c7d] mt-1">
                 Mehul Gupta
+              </p>
+            </div>
+          </div>
+           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+            <div className="relative w-full h-64">
+              <Image
+                src="/hostel secretary girls.jpg"
+                alt="Hostel Affairs Secretary"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-5 text-center">
+              <h3 className="font-semibold text-[#0b3c7d]">
+                Hostel Affairs Secretary (Girls)
+              </h3>
+              <p className="text-lg font-bold text-[#0b3c7d] mt-1">
+                Mishthi Agarwal
+              </p>
+            </div>
+          </div>
+          <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+            <div className="relative w-full h-64">
+              <Image
+                src="/pg academic secretary.jpg"
+                alt="PG Academic Secretary"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-5 text-center">
+              <h3 className="font-semibold text-[#0b3c7d]">
+                PG Academic Secretary
+              </h3>
+              <p className="text-lg font-bold text-[#0b3c7d] mt-1">
+                Chirag Prajapati
               </p>
             </div>
           </div>

@@ -12,16 +12,28 @@ const clubs = [
 ]
 
 const coordinators = [
-  { name: 'Alice', photo: '/coordinators/alice.jpg', club: 'Coding Club' },
-  { name: 'Bob Smith', photo: '/coordinators/bob.jpg', club: 'SAE Club' },
-  { name: 'Charlie Brown', photo: '/coordinators/charlie.jpg', club: 'Robo-sapiens Club' },
-  { name: 'Diana Prince', photo: '/coordinators/diana.jpg', club: 'Astriaza Club' },
-  { name: 'Edward Wilson', photo: '/coordinators/edward.jpg', club: 'FinTech Club' }
+  { name: 'Soham kakkar', photo: '/coding coordinator.jpg', club: 'Coding Club' },
+  { name: 'Third year', photo: '/sae coordinator.png', club: 'SAE Club' },
+  { name: 'Rudransh Joshi', photo: '/sae co-coordinator.jpg', club: 'SAE Club', role: 'Co-Coordinator' },
+  { name: 'Hriday Rana', photo: '/robotics coordinator.jpg', club: 'Robotics Club' },
+  { name: 'Vaibhav Mittal', photo: '/astriaza coordinator.jpg', club: 'Astriaza Club' },
+  { name: 'Khushi', photo: '/fintech coordinator.png', club: 'FinTech Club' }
+  
 ]
+const PICs = [
+  { name: 'Sumit Kumar Pandey', photo: '/PIC coding.jpg', club: 'Coding Club' },
+  { name: 'Dr. Arvind Kumar Rajput', photo: '/PIC sae.jpeg', club: 'SAE Club' },
+  
+  { name: 'Nalin Kumar Sharma', photo: '/PIC robotics.jpg', club: 'Robotics Club' },
+  { name: 'Soumyadip Das', photo: '/PIC astriaza.jpg', club: 'Astriaza Club' },
+  { name: 'Dr. Vijay Kumar Pal', photo: '/PIC fintech.jpeg', club: 'FinTech Club' }
+  
+]
+
 
 // Technical Secretary
 const secretary = {
-  name: "Rahul Verma",
+  name: "Aman Pathak",
   photo: "/Academic.jpg",
   post: "Academic Secretary"
 }
@@ -40,7 +52,7 @@ const Page = () => {
           className="object-cover blur-[1.5px] brightness-90"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 md:px-16">
-          <p className="text-[#003f87] text-5xl sm:text-6xl md:text-8xl font-bold drop-shadow-lg">
+          <p className="text-[#ffffff] text-5xl sm:text-6xl md:text-8xl font-bold drop-shadow-lg">
             Academic Council
           </p>
           <p className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold drop-shadow-md mt-2">
@@ -53,7 +65,7 @@ const Page = () => {
       <div className="max-w-sm mx-auto py-16 sm:py-20 mt-12 sm:mt-16 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-md flex flex-col items-center px-6">
         <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden mb-6">
           <Image
-            src='/Academic.jpeg'
+            src='/academicsecretary.jpeg'
             alt={secretary.name}
             fill
             className="object-cover"
@@ -99,6 +111,40 @@ const Page = () => {
           ))}
         </div>
       </div>
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 sm:py-20 mt-12 sm:mt-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#003f87]">
+            Club PICs
+          </h2>
+          <div className="w-20 sm:w-24 h-1 bg-[#003f87] mx-auto mt-3 rounded-full"></div>
+        </div>
+        <div className="max-w-7xl mx-auto grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-0">
+          {PICs.map((PIC, index) => (
+            <div key={index} className="bg-blue-50 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center p-6">
+              <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden mb-4">
+                <Image src={PIC.photo} alt={PIC.name} fill className="object-cover" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#003f87] text-center">{PIC.name}</h3>
+
+
+
+              <p className="text-gray-700 text-center mt-1">
+                {PIC.club} 
+              </p>
+
+
+
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+
+
+
+
+
 
       {/* Club Coordinators Section */}
       <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 sm:py-20 mt-12 sm:mt-16">
@@ -115,7 +161,15 @@ const Page = () => {
                 <Image src={coordinator.photo} alt={coordinator.name} fill className="object-cover" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-[#003f87] text-center">{coordinator.name}</h3>
-              <p className="text-gray-700 text-center mt-1">{coordinator.club}</p>
+
+
+
+              <p className="text-gray-700 text-center mt-1">
+                {coordinator.club} {coordinator.role || 'Coordinator'}
+              </p>
+
+
+
             </div>
           ))}
         </div>

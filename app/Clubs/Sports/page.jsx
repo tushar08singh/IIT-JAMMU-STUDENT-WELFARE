@@ -20,27 +20,27 @@ const clubs = [
 ]
 
 const coordinators = [
-  { name: 'Aarav Mehta', photo: '/coordinators/aarav.jpg', club: 'Athletics Club' },
-  { name: 'Priya Sharma', photo: '/coordinators/priya.jpg', club: 'Badminton Club (Male)' },
-  { name: 'Priya Sharma', photo: '/coordinators/priya.jpg', club: 'Badminton Club (Female)' },
-  { name: 'Kavya Nair', photo: '/coordinators/kavya.jpg', club: 'Basketball Club (Male)' },
-   { name: 'Kavya Nair', photo: '/coordinators/kavya.jpg', club: 'Basketball Club (Female)' },
-  { name: 'Rohan Gupta', photo: '/coordinators/rohan.jpg', club: 'Cricket Club' },
-  { name: 'Sanya Kapoor', photo: '/coordinators/sanya.jpg', club: 'Chess Club (Male)' },
-   { name: 'Sanya Kapoor', photo: '/coordinators/sanya.jpg', club: 'Chess Club (Female)' },
-  { name: 'Ishaan Verma', photo: '/coordinators/ishaan.jpg', club: 'Football Club' },
-  { name: 'Mehul Jain', photo: '/coordinators/mehul.jpg', club: 'E-Sports Club' },
-   { name: 'Tanya Singh', photo: '/coordinators/tanya.jpg', club: 'Table Tennis Club' },
-  { name: 'Karan Mehra', photo: '/coordinators/karan.jpg', club: 'Volleyball Club (Male)' },
-   { name: 'Karan Mehra', photo: '/coordinators/karan.jpg', club: 'Volleyball Club (Female)' },
-  { name: 'Divya Rao', photo: '/coordinators/divya.jpg', club: 'Weightlifting Club' },
-  { name: 'Vivek Singh', photo: '/coordinators/vivek.jpg', club: 'Indoor Sports Club' }
+  { name: 'Aarav Mehta', photo: '/athletics coordinator.jpg', club: 'Athletics Club' },
+  { name: 'Priya Sharma', photo: '/badminton coordinator boys.jpg', club: 'Badminton Club (Male)' },
+  { name: 'Priya Sharma', photo: '/badminton coordinator girls.jpg', club: 'Badminton Club (Female)' },
+  { name: 'Kavya Nair', photo: '/basketball coordinator boys.jpg', club: 'Basketball Club (Male)' },
+   { name: 'Kavya Nair', photo: '/basketball coordinator girls.jpg', club: 'Basketball Club (Female)' },
+  { name: 'Rohan Gupta', photo: '/cricket coordinator.jpg', club: 'Cricket Club' },
+  { name: 'Sanya Kapoor', photo: '/chess coordinator boys.jpg', club: 'Chess Club (Male)' },
+   { name: 'Sanya Kapoor', photo: '/chess coordinator girls.jpg', club: 'Chess Club (Female)' },
+  { name: 'Ishaan Verma', photo: '/football coordinator.jpg', club: 'Football Club' },
+  { name: 'Mehul Jain', photo: '/e-sports coordinator.jpg', club: 'E-Sports Club' },
+   { name: 'Tanya Singh', photo: '/tt coordinator.jpg', club: 'Table Tennis Club' },
+  { name: 'Karan Mehra', photo: '/volleyball coordinator boys.jpg', club: 'Volleyball Club (Male)' },
+   { name: 'Karan Mehra', photo: '/volleyball coordinator girls.jpg', club: 'Volleyball Club (Female)' },
+  { name: 'Divya Rao', photo: '/weightlifting coordinator.jpg', club: 'Weightlifting Club' },
+  { name: 'Vivek Singh', photo: '/indoor coordinator.jpg', club: 'Indoor Sports Club' }
 ]
 
 const secretary = {
-  name: "Sandeep Moond", // Changed name for Sports Secretary
-  photo: "/secretary/rajesh.jpg", // Changed photo for Sports Secretary
-  post: "Sports Secretary" // Updated Post
+  name: "Sandeep Moond", 
+  photo: "/sandeep moond.jpeg", 
+  post: "Sports Secretary" 
 }
 
 const Page = () => {
@@ -48,16 +48,16 @@ const Page = () => {
     <>
       <Header />
 
-      {/* Hero Section */}
+     
       <div className="relative w-full max-w-[1200px] h-[500px] mx-auto rounded-xl overflow-hidden mt-6">
         <Image
           alt="Sports Council"
-          src="/sports.jpg" // Change image source (ensure this file exists)
+          src="/sports.jpg" 
           fill
           className="object-cover blur-[1.5px] brightness-90"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 md:px-16">
-          <p className="text-[#003f87] text-5xl sm:text-6xl md:text-8xl font-bold drop-shadow-lg">
+          <p className="text-[#ffffff] text-5xl sm:text-6xl md:text-8xl font-bold drop-shadow-lg">
             Sports Council
           </p>
           <p className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold drop-shadow-md mt-2">
@@ -66,11 +66,11 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Sports Secretary Section (VERTICAL, CENTERED) */}
+      
       <div className="max-w-sm mx-auto py-16 sm:py-20 mt-12 sm:mt-16 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-md flex flex-col items-center px-6">
         <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden mb-6">
           <Image
-            src='/Academic.jpeg'// Using the specific photo from the secretary object
+            src='/sports secretary.jpeg'// Using the specific photo from the secretary object
             alt={secretary.name}
             fill
             className="object-cover"
