@@ -31,7 +31,7 @@ const PICs = [
   { name: 'Dr. Ambika Prasad Shah', photo: '/PIC literary.jpg', club: 'Literary Club' },
   
   { name: 'Nalin Kumar Sharma', photo: '/PIC dance.jpg', club: 'Dance Club' },
-  { name: 'Soumyadip Das', photo: '/PIC drama.jpg', club: 'Drama Club' },
+  { name: 'XYZ', photo: '/PIC drama.jpg', club: 'Drama Club' },
   { name: 'Dr. Vijay Kumar Pal', photo: '/PIC music.jpeg', club: 'Music Club' },
   { name: 'Dr. Vijay Kumar Pal', photo: '/PIC fine arts.jpeg', club: 'Fine Arts Club' },
   { name: 'Sunil Kumar Kashyap', photo: '/PIC anime.png', club: 'Anime Club' },
