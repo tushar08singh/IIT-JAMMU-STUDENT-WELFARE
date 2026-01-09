@@ -6,43 +6,41 @@ import Footer from '../../components/Footer'
 import { FaInstagram } from 'react-icons/fa'
 
 const clubs = [
-  { name: 'Photography Club', image: '/photography.jpg', link: 'https://www.instagram.com/chitraka_iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { name: 'Literary Club', image: '/literary.jpg', link: 'https://www.instagram.com/sangam.iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { name: 'Dance Club', image: '/dance.jpg', link: 'https://www.instagram.com/beat_street.iitjmu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { name: 'Drama Club', image: '/drama.jpg', link: 'https://www.instagram.com/the_dramatizers_iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { name: 'Music Club', image: '/music.jpg', link: 'https://www.instagram.com/malang_iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { name: 'Fine Arts Club', image: '/artihc.jpg', link: 'https://www.instagram.com/artihc.iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { name: 'Anime Club', image: '/anime.jpg', link: 'https://www.instagram.com/anisoul_iitjmu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { name: 'Cooking Club', image: '/cooking.jpg', link: 'https://www.instagram.com/cookingclub.iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' }
+  { name: 'Nature and Adventure Club', image: '/NAC test.png', link: 'https://www.instagram.com/nac_iitjmu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
+  { name: 'Kritash Club', image: '/kritash.jpg', link: 'https://www.instagram.com/kritash_iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
+  { name: 'RE4M Club', image: '/RE4M.jpg', link: 'https://www.instagram.com/re4m_iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
+  { name: 'Mesh Club', image: '/mesh.jpg', link: 'https://www.instagram.com/mesh.iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
+  { name: 'Ek Bharat Shreshtha Bharat', image: '/ebsb.jpg', link: 'https://www.instagram.com/ebsb.iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
+  { name: 'Wellbeing Club', image: '/wellbeing.jpg', link: 'https://www.instagram.com/wellbeing.iitjammu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' }
 ]
 
 const coordinators = [
-  { name: 'Manish Kumar', photo: '/photography coordinator.jpeg', club: 'Photography Club' },
-  { name: 'Sparsh Dubey', photo: '/literary coordinator.jpg', club: 'Literary Club' },
-  { name: 'Akshat Rai', photo: '/dance coordinator.png', club: 'Dance Club' },
-  { name: 'Anmol Ratan Srivastav', photo: '/drama coordinator.jpeg', club: 'Drama Club' },
-  { name: 'Nishchay Singh', photo: '/music coordinator.jpg', club: 'Music Club' },
-  { name: 'Hriday Jain', photo: '/fine arts coordinator.jpeg', club: 'Fine Arts Club' },
-  { name: 'Keshav Kundan Kumar', photo: '/anime coordinator.jpeg', club: 'Anime Club' },
-  { name: 'Uday prakash makija ', photo: '/cooking coordinator.jpg', club: 'Cooking Club' }
+  { name: 'Yash Agarwal', photo: '/nac coordinator.jpeg', club: 'Nature and Adventure Club' },
+  { name: 'Radhika Verma', photo: '/nac co-coordinator.jpeg', club: 'Nature and Adventure Club', role: 'Co-Coordinator' },
+  { name: 'Aditya Pratap Singh', photo: '/kritash coordinator-1.jpg', club: 'Kritash Club' },
+  { name: 'Arshpreet Kaur', photo: '/kritash coordinator-2.jpg', club: 'Kritash Club' },
+  { name: 'Harsh kumar', photo: '/re4m coordinator.jpg', club: 'RE4M Club' },
+  { name: 'Yaduraj Bhakar', photo: '/mesh coordinator.jpg', club: 'Mesh Club' },
+  { name: 'Machavolu Venkata Siva Sai Subrahman', photo: '/ebsb coordinator.jpeg', club: 'EBSB Club' },
+  { name: 'Palak Aggarwal', photo: '/wellbeing coordinator.jpg', club: 'Wellbeing Club' }
 ]
+
 const PICs = [
-  { name: 'Sarada Prasad Gochhayat', photo: '/PIC photography.jpeg', club: 'Photography Club' },
-  { name: 'Dr. Ambika Prasad Shah', photo: '/PIC literary.jpg', club: 'Literary Club' },
-  
-  { name: 'Nalin Kumar Sharma', photo: '/PIC dance.jpg', club: 'Dance Club' },
-  { name: 'Soumyadip Das', photo: '/PIC drama.jpg', club: 'Drama Club' },
-  { name: 'Dr. Vijay Kumar Pal', photo: '/PIC music.jpeg', club: 'Music Club' },
-  { name: 'Dr. Vijay Kumar Pal', photo: '/PIC fine arts.jpeg', club: 'Fine Arts Club' },
-  { name: 'Sunil Kumar Kashyap', photo: '/PIC anime.png', club: 'Anime Club' },
-  { name: 'Arvind Kumar', photo: '/PIC cooking.jpg', club: 'Cooking Club' }
-  
+  { name: 'Shafkat Shafi Dar', photo: '/PIC nac.jpg', club: 'Nature and Adventure Club' },
+  { name: 'Dr. Sanchita Srivastava', photo: '/PIC kritash.jpg', club: 'Kritash Club' },
+
+  { name: 'xyz', photo: '/PIC re4m.jpg', club: 'RE4M Club' },
+  { name: 'Mithu Baidya', photo: '/PIC mesh.jpeg', club: 'Mesh Club' },
+  { name: 'xyz', photo: '/PIC music.jpeg', club: 'EBSB Club' },
+  { name: 'xyz', photo: '/PIC fine arts.jpeg', club: 'Wellbeing Club' }
+ 
+
 ]
 
 const secretary = {
-  name: "Saumya Gupta",
-  photo: "/secretary/riya.jpg",
-  post: "Cultural Secretary"
+  name: "Ayush Sharma",
+  photo: "ayush sharma.jpg",
+  post: "General Secretary"
 }
 
 const Page = () => {
@@ -50,17 +48,17 @@ const Page = () => {
     <>
       <Header />
 
-      {/* Hero Section */}
+
       <div className="relative w-full max-w-[1200px] h-[500px] mx-auto rounded-xl overflow-hidden mt-6">
         <Image
-          alt="Cultural Clubs"
-          src="/anhad.jpg"
+          alt="General Council Clubs"
+          src="/mainiit.png"
           fill
           className="object-cover blur-[1.5px] brightness-90"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 md:px-16">
           <p className="text-[#ffffff] text-5xl sm:text-6xl md:text-8xl font-bold drop-shadow-lg">
-            Cultural Council
+            General Council
           </p>
           <p className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold drop-shadow-md mt-2">
             IIT Jammu
@@ -68,11 +66,11 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Cultural Secretary Section (VERTICAL, CENTERED) */}
+
       <div className="max-w-sm mx-auto py-16 sm:py-20 mt-12 sm:mt-16 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-md flex flex-col items-center px-6">
         <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden mb-6">
           <Image
-            src='/cultural secretary.jpeg'
+            src='/general secretary.jpeg'
             alt={secretary.name}
             fill
             className="object-cover"
@@ -85,16 +83,6 @@ const Page = () => {
       </div>
 
 
-
-
-
-
-
-
-
-
-
-      {/* Our Clubs Section */}
       <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 sm:py-20 mt-12 sm:mt-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#003f87]">
@@ -131,8 +119,7 @@ const Page = () => {
 
 
 
-
-<div className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 sm:py-20 mt-12 sm:mt-16">
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 sm:py-20 mt-12 sm:mt-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#003f87]">
             Club PICs
@@ -155,7 +142,6 @@ const Page = () => {
 
 
 
-
       {/* Club Coordinators Section */}
       <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 sm:py-20 mt-12 sm:mt-16">
         <div className="text-center mb-12">
@@ -171,13 +157,13 @@ const Page = () => {
                 <Image src={coordinator.photo} alt={coordinator.name} fill className="object-cover" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-[#003f87] text-center">{coordinator.name}</h3>
-              <p className="text-gray-700 text-center mt-1">{coordinator.club} Coordinator</p>
+              <p className="text-gray-700 text-center mt-1">{coordinator.club} {coordinator.role || 'Coordinator'}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   )
 }

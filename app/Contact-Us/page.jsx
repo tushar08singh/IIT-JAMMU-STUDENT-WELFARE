@@ -9,37 +9,37 @@ const contactTeam = [
     role: "Dean, Student Affairs",
     name: "Prof. XYZ",
     email: "dean.sa@iitjammu.ac.in",
-    image: "/team/dean-sa.jpg",
+    image: "/team/dean-sa.jpeg",
   },
   {
     role: "General Secretary",
     name: "Ayush Sharma",
     email: "gensec.sa@iitjammu.ac.in",
-    image: "/team/general-secretary.jpg",
+    image: "/general secretary.jpeg",
   },
   {
     role: "Academic Secretary",
     name: "Aman Pathak",
     email: "academic.sec@iitjammu.ac.in",
-    image: "/team/academic-secretary.jpg",
+    image: "/academic secretary.jpeg",
   },
   {
     role: "Cultural Secretary",
     name: "Saumya Gupta",
     email: "cultural.sec@iitjammu.ac.in",
-    image: "/team/cultural-secretary.jpg",
+    image: "/cultural secretary.jpeg",
   },
   {
     role: "Sports Secretary",
     name: "Sandeep Moond",
     email: "sports.sec@iitjammu.ac.in",
-    image: "/team/sports-secretary.jpg",
+    image: "/sports secretary.jpeg",
   },
   {
     role: "Wellness Secretary",
     name: "Owais Ansar",
     email: "wellness.sec@iitjammu.ac.in",
-    image: "/team/wellness-secretary.jpg",
+    image: "/wellness secretary.png",
   },
 ];
 
