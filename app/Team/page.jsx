@@ -144,7 +144,7 @@ export default function TeamPage() {
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
             <div className="relative w-full h-64">
               <Image
-                src="/sports secretary.jpeg"
+                src="/sports secretary.png"
                 alt="Sports Secretary"
                 fill
                 className="object-cover"

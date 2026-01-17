@@ -10,13 +10,13 @@ const flagshipEvents = [
     title: "Anhad – Cultural Fest",
     image: "/anhad.jpg",
     description:
-      "Anhad is IIT Jammu’s annual cultural extravaganza, celebrating creativity, expression, and diversity. The festival features music, dance, drama, literary arts, fine arts, and a series of high-energy events that bring students together in a vibrant cultural showcase.",
+      "Anhad is IIT Jammu’s techno-cultural fest, celebrating creativity, expression, and diversity. The festival features music, dance, drama, literary arts, fine arts, and a series of high-energy events that bring students together in a vibrant cultural showcase.",
   },
   {
     title: "Nexus – Technical Fest",
     image: "/nexus.jpg",
     description:
-      "Nexus is IIT Jammu’s flagship technical festival that promotes innovation, engineering excellence, and problem-solving. The fest includes hackathons, robotics competitions, technical workshops, research exhibitions, and events aimed at fostering scientific thinking among students.",
+      "Nexus is IIT Jammu’s inter branch technical festival that promotes innovation, engineering excellence, and problem-solving. The fest includes hackathons, robotics competitions, technical workshops, research exhibitions, and events aimed at fostering scientific thinking among students.",
   },
   {
     title: "Convoquer – Leadership & Sports Summit",

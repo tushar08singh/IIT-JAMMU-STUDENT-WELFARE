@@ -21,17 +21,17 @@ const coordinators = [
   { name: 'Sparsh Dubey', photo: '/literary coordinator.jpg', club: 'Literary Club' },
   { name: 'Akshat Rai', photo: '/dance coordinator.png', club: 'Dance Club' },
   { name: 'Anmol Ratan Srivastav', photo: '/drama coordinator.jpeg', club: 'Drama Club' },
-  { name: 'Nishchay Singh', photo: '/music coordinator.jpg', club: 'Music Club' },
+  { name: 'Nishchay Singh', photo: 'https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941876/music_coordinator_zllcve.jpg', club: 'Music Club' },
   { name: 'Hriday Jain', photo: '/fine arts coordinator.jpeg', club: 'Fine Arts Club' },
   { name: 'Keshav Kundan Kumar', photo: '/anime coordinator.jpeg', club: 'Anime Club' },
   { name: 'Uday prakash makija ', photo: '/cooking coordinator.jpg', club: 'Cooking Club' }
 ]
 const PICs = [
   { name: 'Sarada Prasad Gochhayat', photo: '/PIC photography.jpeg', club: 'Photography Club' },
-  { name: 'Dr. Ambika Prasad Shah', photo: '/PIC literary.jpg', club: 'Literary Club' },
+  { name: 'Dr. Ambika Prasad Shah', photo: 'https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941886/PIC_literary_uuruj9.jpg', club: 'Literary Club' },
   
   { name: 'Nalin Kumar Sharma', photo: '/PIC dance.jpg', club: 'Dance Club' },
-  { name: 'Soumyadip Das', photo: '/PIC drama.jpg', club: 'Drama Club' },
+  { name: 'XYZ', photo: '/PIC drama.jpg', club: 'Drama Club' },
   { name: 'Dr. Vijay Kumar Pal', photo: '/PIC music.jpeg', club: 'Music Club' },
   { name: 'Dr. Vijay Kumar Pal', photo: '/PIC fine arts.jpeg', club: 'Fine Arts Club' },
   { name: 'Sunil Kumar Kashyap', photo: '/PIC anime.png', club: 'Anime Club' },

@@ -33,7 +33,7 @@ const contactTeam = [
     role: "Sports Secretary",
     name: "Sandeep Moond",
     email: "sports.sec@iitjammu.ac.in",
-    image: "/sports secretary.jpeg",
+    image: "/sports secretary.png",
   },
   {
     role: "Wellness Secretary",
