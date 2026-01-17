@@ -174,7 +174,7 @@ const Page = () => {
               {/* Dean Photo */}
               <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-xl border">
                 <Image
-                  src="/dean.jpg"   
+                  src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1768641536/WhatsApp_Image_2026-01-17_at_14.12.59_1_bselui.jpg"   
                   alt="Dean Student Affairs"
                   fill
                   className="object-cover"
