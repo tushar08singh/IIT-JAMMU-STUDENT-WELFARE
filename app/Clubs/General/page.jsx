@@ -29,12 +29,10 @@ const PICs = [
   { name: 'Shafkat Shafi Dar', photo: '/PIC nac.jpg', club: 'Nature and Adventure Club' },
   { name: 'Dr. Sanchita Srivastava', photo: '/PIC kritash.jpg', club: 'Kritash Club' },
 
-  { name: 'xyz', photo: '/PIC re4m.jpg', club: 'RE4M Club' },
+  { name: 'Dr. Chandan Yadav', photo: '/PIC re4m.jpg', club: 'RE4M Club' },
   { name: 'Mithu Baidya', photo: '/PIC mesh.jpeg', club: 'Mesh Club' },
-  { name: 'xyz', photo: '/PIC music.jpeg', club: 'EBSB Club' },
-  { name: 'xyz', photo: '/PIC fine arts.jpeg', club: 'Wellbeing Club' }
- 
-
+  { name: 'Dr. Srishilan C', photo: '/PIC music.jpeg', club: 'EBSB Club' },
+  { name: 'Dr. Kishore Kumar Jagini', photo: '/PIC wellbeing.jpeg', club: 'Wellbeing Club' }
 ]
 
 const secretary = {

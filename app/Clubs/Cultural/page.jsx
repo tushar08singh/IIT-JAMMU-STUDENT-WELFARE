@@ -29,11 +29,11 @@ const coordinators = [
 const PICs = [
   { name: 'Sarada Prasad Gochhayat', photo: '/PIC photography.jpeg', club: 'Photography Club' },
   { name: 'Dr. Ambika Prasad Shah', photo: 'https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941886/PIC_literary_uuruj9.jpg', club: 'Literary Club' },
-  
-  { name: 'Nalin Kumar Sharma', photo: '/PIC dance.jpg', club: 'Dance Club' },
-  { name: 'XYZ', photo: '/PIC drama.jpg', club: 'Drama Club' },
-  { name: 'Dr. Vijay Kumar Pal', photo: '/PIC music.jpeg', club: 'Music Club' },
-  { name: 'Dr. Vijay Kumar Pal', photo: '/PIC fine arts.jpeg', club: 'Fine Arts Club' },
+
+  { name: 'Dr. Suman Sarkar', photo: '/PIC dance.jpg', club: 'Dance Club' },
+  { name: 'Dr. Suman Sarkar', photo: '/PIC drama.jpg', club: 'Drama Club' },
+  { name: 'Dr. Suman Sarkar', photo: '/PIC music.jpeg', club: 'Music Club' },
+  { name: 'Dr. Chembolu Vinay', photo: 'https://res.cloudinary.com/dveqd1vm1/image/upload/v1768641536/WhatsApp_Image_2026-01-17_at_14.12.59_3_eufqfz.jpg', club: 'Fine Arts Club' },
   { name: 'Sunil Kumar Kashyap', photo: '/PIC anime.png', club: 'Anime Club' },
   { name: 'Arvind Kumar', photo: '/PIC cooking.jpg', club: 'Cooking Club' }
   

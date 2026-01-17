@@ -11,7 +11,7 @@ const Page = () => {
     { label: "Cultural Council", href: "/Clubs/Cultural" },
     { label: "General Council", href: "/Clubs/General" },
     { label: "Sports Council", href: "/Clubs/Sports" },
-    { label: "Flagship events", href: "/Flagship-events" },
+    { label: "Flagship events", href: "/Flagship-Events" },
     { label: "Announcements", href: "/announcements" },
   ];
 
