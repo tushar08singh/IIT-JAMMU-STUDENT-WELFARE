@@ -2,7 +2,8 @@ import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 
 const ADMIN_EMAILS = [
-  "tusharneymar8@gmail.com"
+  "tusharneymar8@gmail.com",
+  "apaarmsd@gmail.com"
   
 ]
 
