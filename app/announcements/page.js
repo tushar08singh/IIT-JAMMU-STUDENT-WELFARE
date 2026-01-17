@@ -18,14 +18,16 @@ const AnnouncementsPage = () => {
     fetchEvents();
   }, []);
 
-  if (events.length > 0) {
-    const today = new Date();
-    const upcoming = events.filter((e) => new Date(e.date) >= today);
-    const past = events.filter((e) => new Date(e.date) < today);
+  useEffect(() => {
+    if (events.length > 0) {
+      const today = new Date();
+      const upcoming = events.filter((e) => new Date(e.date) >= today);
+      const past = events.filter((e) => new Date(e.date) < today);
 
-    setUpcoming(upcoming);
-    setPast(past);
-  }
+      setUpcoming(upcoming);
+      setPast(past);
+    }
+  }, [events])
 
   return (
     <>
