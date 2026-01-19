@@ -7,19 +7,19 @@ import Image from "next/image";
 
 const flagshipEvents = [
   {
-    title: "Anhad – Cultural Fest",
+    title: "Anhad – Techno-Cultural Fest",
     image: "/anhad.jpg",
     description:
       "Anhad is IIT Jammu’s techno-cultural fest, celebrating creativity, expression, and diversity. The festival features music, dance, drama, literary arts, fine arts, and a series of high-energy events that bring students together in a vibrant cultural showcase.",
   },
   {
-    title: "Nexus – Technical Fest",
+    title: "Nexus – Inter Branch Technical Fest",
     image: "/nexus.jpg",
     description:
       "Nexus is IIT Jammu’s inter branch technical festival that promotes innovation, engineering excellence, and problem-solving. The fest includes hackathons, robotics competitions, technical workshops, research exhibitions, and events aimed at fostering scientific thinking among students.",
   },
   {
-    title: "Convoquer – Leadership & Sports Summit",
+    title: "Convoquer – Inter-College Sports Tournament",
     image: "/convoquer.jpg",
     description:
       "Convoquer is IIT Jammu’s premier inter-college sports tournament, bringing together athletes from institutions across the region to compete in a wide range of sporting events. The festival celebrates competitive spirit, teamwork, discipline, and excellence. With high-energy matches, enthusiastic crowds, and a vibrant sports culture, Convoquer stands as a symbol of athletic passion and unity at IIT Jammu.",
@@ -31,7 +31,7 @@ const flagshipEvents = [
       "Pragyaan is IIT Jammu’s academic and research festival that brings together scholars, innovators, and professionals to exchange knowledge and ideas. The event features expert talks, panel discussions, research presentations, and interactive workshops designed to ignite intellectual curiosity and promote academic excellence.",
   },
   {
-    title: "Udyamitsav – Entrepreneurship & Innovation Summit",
+    title: "Udyamitsav – Entrepreneurship Fest",
     image: "/udyamitsav.jpg",
     description:
       "Udyamitsav is IIT Jammu’s entrepreneurship and innovation festival dedicated to nurturing startup culture and creative problem-solving. The summit includes pitch competitions, startup showcases, mentorship programs, and sessions with industry leaders, empowering students to transform ideas into impactful ventures.",
@@ -40,7 +40,8 @@ const flagshipEvents = [
     title: "Pravaah – Inter Branch Sports Meet",
     image: "/pravaah.jpg",
     description:
-      "Pravaah is IIT Jammu’s annual inter-branch sports meet, designed to promote healthy competition, teamwork, and athletic excellence among students. The event brings together participants from all academic branches to compete across a variety of sports, fostering unity, sportsmanship, and a vibrant sporting culture on campus.",}
+      "Pravaah is IIT Jammu’s annual inter-branch sports meet, designed to promote healthy competition, teamwork, and athletic excellence among students. The event brings together participants from all academic branches to compete across a variety of sports, fostering unity, sportsmanship, and a vibrant sporting culture on campus.",
+  },
 ];
 
 const Page = () => {

@@ -239,23 +239,6 @@ export default function TeamPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
               <div className="relative w-full h-64">
                 <Image
-                  src="/mess secretary.jpg"
-                  alt="Mess Secretary"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-5 text-center">
-                <h3 className="font-semibold text-[#0b3c7d]">Mess Secretary</h3>
-                <p className="text-lg font-bold text-[#0b3c7d] mt-1">
-                  Ujjwal Gupta
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-              <div className="relative w-full h-64">
-                <Image
                   src="/wellness secretary.png"
                   alt="Wellness Secretary"
                   fill
@@ -268,6 +251,22 @@ export default function TeamPage() {
                 </h3>
                 <p className="text-lg font-bold text-[#0b3c7d] mt-1">
                   Owais Ansar
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+              <div className="relative w-full h-64">
+                <Image
+                  src="/mess secretary.jpg"
+                  alt="Mess Secretary"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="font-semibold text-[#0b3c7d]">Mess Secretary</h3>
+                <p className="text-lg font-bold text-[#0b3c7d] mt-1">
+                  Ujjwal Gupta
                 </p>
               </div>
             </div>
