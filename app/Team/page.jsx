@@ -33,7 +33,9 @@ export default function TeamPage() {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-lg font-semibold text-[#0b3c7d]">Dean Student Affairs</h3>
+                <h3 className="text-lg font-semibold text-[#0b3c7d]">
+                  Dean Student Affairs
+                </h3>
                 <p className="text-gray-600">Dr. Anup Shukla</p>
               </div>
             </div>
@@ -88,8 +90,6 @@ export default function TeamPage() {
                 <p className="text-gray-600">Vishal Begnehal</p>
               </div>
             </div>
-
-
           </div>
         </section>
 
@@ -106,25 +106,6 @@ export default function TeamPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
               <div className="relative w-full h-64">
                 <Image
-                  src="/general secretary.jpeg"
-                  alt="General Secretary"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-5 text-center">
-                <h3 className="font-semibold text-[#0b3c7d]">
-                  General Secretary
-                </h3>
-                <p className="text-lg font-bold text-[#0b3c7d] mt-1">
-                  Ayush Sharma
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-              <div className="relative w-full h-64">
-                <Image
                   src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1768641536/WhatsApp_Image_2026-01-17_at_14.12.59_2_jcbwsp.jpg"
                   alt="Academic Secretary"
                   fill
@@ -137,6 +118,44 @@ export default function TeamPage() {
                 </h3>
                 <p className="text-lg font-bold text-[#0b3c7d] mt-1">
                   Aman Pathak
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+              <div className="relative w-full h-64">
+                <Image
+                  src="/pg academic secretary.jpg"
+                  alt="PG Academic Secretary"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="font-semibold text-[#0b3c7d]">
+                  PG Academic Secretary
+                </h3>
+                <p className="text-lg font-bold text-[#0b3c7d] mt-1">
+                  Chirag Prajapati
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+              <div className="relative w-full h-64">
+                <Image
+                  src="/general secretary.jpeg"
+                  alt="General Secretary"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="font-semibold text-[#0b3c7d]">
+                  General Secretary
+                </h3>
+                <p className="text-lg font-bold text-[#0b3c7d] mt-1">
+                  Ayush Sharma
                 </p>
               </div>
             </div>
@@ -163,56 +182,18 @@ export default function TeamPage() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
               <div className="relative w-full h-64">
                 <Image
-                  src="/sports secretary.png"
-                  alt="Sports Secretary"
+                  src="/hostel secretary girls.jpg"
+                  alt="Hostel Affairs Secretary"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-5 text-center">
                 <h3 className="font-semibold text-[#0b3c7d]">
-                  Sports Secretary
+                  Hostel Affairs Secretary (Girls)
                 </h3>
                 <p className="text-lg font-bold text-[#0b3c7d] mt-1">
-                  Sandeep Moond
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-              <div className="relative w-full h-64">
-                <Image
-                  src="/wellness secretary.png"
-                  alt="Wellness Secretary"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-5 text-center">
-                <h3 className="font-semibold text-[#0b3c7d]">
-                  Wellness Secretary
-                </h3>
-                <p className="text-lg font-bold text-[#0b3c7d] mt-1">
-                  Owais Ansar
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-              <div className="relative w-full h-64">
-                <Image
-                  src="/mess secretary.jpg"
-                  alt="Mess Secretary"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-5 text-center">
-                <h3 className="font-semibold text-[#0b3c7d]">
-                  Mess Secretary
-                </h3>
-                <p className="text-lg font-bold text-[#0b3c7d] mt-1">
-                  Ujjwal Gupta
+                  Mishthi Agarwal
                 </p>
               </div>
             </div>
@@ -235,39 +216,58 @@ export default function TeamPage() {
                 </p>
               </div>
             </div>
+
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
               <div className="relative w-full h-64">
                 <Image
-                  src="/hostel secretary girls.jpg"
-                  alt="Hostel Affairs Secretary"
+                  src="/sports secretary.png"
+                  alt="Sports Secretary"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-5 text-center">
                 <h3 className="font-semibold text-[#0b3c7d]">
-                  Hostel Affairs Secretary (Girls)
+                  Sports Secretary
                 </h3>
                 <p className="text-lg font-bold text-[#0b3c7d] mt-1">
-                  Mishthi Agarwal
+                  Sandeep Moond
                 </p>
               </div>
             </div>
+
             <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
               <div className="relative w-full h-64">
                 <Image
-                  src="/pg academic secretary.jpg"
-                  alt="PG Academic Secretary"
+                  src="/mess secretary.jpg"
+                  alt="Mess Secretary"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-5 text-center">
+                <h3 className="font-semibold text-[#0b3c7d]">Mess Secretary</h3>
+                <p className="text-lg font-bold text-[#0b3c7d] mt-1">
+                  Ujjwal Gupta
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+              <div className="relative w-full h-64">
+                <Image
+                  src="/wellness secretary.png"
+                  alt="Wellness Secretary"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-5 text-center">
                 <h3 className="font-semibold text-[#0b3c7d]">
-                  PG Academic Secretary
+                  Wellness Secretary
                 </h3>
                 <p className="text-lg font-bold text-[#0b3c7d] mt-1">
-                  Chirag Prajapati
+                  Owais Ansar
                 </p>
               </div>
             </div>
