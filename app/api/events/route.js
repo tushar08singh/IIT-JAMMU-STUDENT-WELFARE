@@ -17,6 +17,7 @@ export async function GET() {
 
 // POST — Add new event
 export async function POST(req) {
+
   try {
     const data = await req.json();
     await connectDB();
