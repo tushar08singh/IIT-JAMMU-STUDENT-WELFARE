@@ -98,9 +98,7 @@ export default function Page() {
 
       <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-16 mt-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#003f87]">
-            Our Messes
-          </h2>
+          <h2 className="text-4xl font-bold text-[#003f87]">Our Messes</h2>
           <div className="w-24 h-1 bg-[#003f87] mx-auto mt-3 rounded-full" />
         </div>
 
@@ -111,28 +109,15 @@ export default function Page() {
               className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col md:flex-row"
             >
               <div className="relative w-full md:w-1/3 h-56 md:h-auto">
-                <Image
-                  src={mess.image}
-                  alt={mess.name}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={mess.image} alt={mess.name} fill className="object-cover" />
               </div>
 
               <div className="flex-1 p-6">
-                <h3 className="text-2xl font-bold text-[#003f87] mb-2">
-                  {mess.name}
-                </h3>
+                <h3 className="text-2xl font-bold text-[#003f87] mb-2">{mess.name}</h3>
 
-                <p className="text-gray-700 mb-2">
-                  📍 <span className="font-semibold">Location:</span> {mess.location}
-                </p>
-                <p className="text-gray-700 mb-2">
-                  🏢 <span className="font-semibold">Type:</span> {mess.type}
-                </p>
-                <p className="text-gray-700 mb-4">
-                  👥 <span className="font-semibold">Capacity:</span> {mess.capacity}
-                </p>
+                <p className="text-gray-700 mb-2">📍 <span className="font-semibold">Location:</span> {mess.location}</p>
+                <p className="text-gray-700 mb-2">🏢 <span className="font-semibold">Type:</span> {mess.type}</p>
+                <p className="text-gray-700 mb-4">👥 <span className="font-semibold">Capacity:</span> {mess.capacity}</p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-blue-50 rounded-xl p-4 mb-4">
                   <div>
@@ -159,195 +144,52 @@ export default function Page() {
       </section>
 
       {/* Mess Administration & Committee Section */}
-<section className="bg-white py-20">
-  <div className="text-center mb-14">
-    <h2 className="text-4xl font-extrabold text-[#003f87]">
-      Mess Administration & Committee
-    </h2>
-    <div className="w-32 h-1 bg-[#003f87] mx-auto mt-3 rounded-full" />
-  </div>
+      <section className="bg-white py-20">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-extrabold text-[#003f87]">
+            Mess Administration & Committee
+          </h2>
+          <div className="w-110 h-1 bg-[#003f87] mx-auto mt-3 rounded-full" />
+        </div>
 
-  <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-6">
-
-    {/* AD - Mess Management */}
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/arvind-kumar.jpg" alt="Dr. Arvind Kumar" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">AD - Mess Management</h3>
-        <p className="text-gray-700 font-semibold mt-1">Dr. Arvind Kumar</p>
-      </div>
-    </div>
-
-    {/* Wardens */}
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/akash-awale.jpg" alt="Dr. Akash Subhash Awale" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Warden - Canary</h3>
-        <p className="text-gray-700 font-semibold mt-1">Dr. Akash Subhash Awale</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/soumyadip-das.jpg" alt="Dr. Soumyadip Das" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Warden - Fulgar</h3>
-        <p className="text-gray-700 font-semibold mt-1">Dr. Soumyadip Das</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/ved-prakash.jpg" alt="Dr. Ved Prakash Ranjan" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Warden - Dedhar</h3>
-        <p className="text-gray-700 font-semibold mt-1">Dr. Ved Prakash Ranjan</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/guru-ramani.jpg" alt="Dr. Guru B Ramani" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Warden - Anz</h3>
-        <p className="text-gray-700 font-semibold mt-1">Dr. Guru B Ramani</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/riya-bhowmik.jpg" alt="Dr. Riya Bhowmik" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Warden - Egret</h3>
-        <p className="text-gray-700 font-semibold mt-1">Dr. Riya Bhowmik</p>
-      </div>
-    </div>
-
-    {/* Manager & Secretaries */}
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/rehana-rasool.jpg" alt="Ms. Rehana Rasool" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Manager</h3>
-        <p className="text-gray-700 font-semibold mt-1">Ms. Rehana Rasool</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/ujjwal-gupta.jpg" alt="Ujjwal Gupta" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Secretary</h3>
-        <p className="text-gray-700 font-semibold mt-1">Ujjwal Gupta</p>
-      </div>
-    </div>
-
-    
-
-    
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/devansh.jpg" alt="Devansh Agrawal" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Devansh Agrawal</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/gayatri.jpg" alt="Gayatri" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Gayatri</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/gurpreet.jpg" alt="Gurpreet Singh" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Gurpreet Singh</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/anish.jpg" alt="Anish Kumar Yadav" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Anish Kumar Yadav</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/sidharth.jpg" alt="Sidharth Gupta" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Sidharth Gupta</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/yashika.jpg" alt="Yashika" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Yashika</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/ashad.jpg" alt="Ashad Mansoori" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Ashad Mansoori</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/shubham.jpg" alt="Shubham Kumar" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Shubham Kumar</p>
-      </div>
-    </div>
-
-    <div className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
-      <div className="relative w-full h-56 bg-gray-200">
-        <Image src="/committee/riant.jpg" alt="Riant Dadra" fill className="object-cover" />
-      </div>
-      <div className="p-5">
-        <h3 className="text-lg font-bold text-[#003f87]">Mess Committee Member</h3>
-        <p className="text-gray-700 font-semibold mt-1">Riant Dadra</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 px-6">
+          {[
+            { role: "AD - Mess Management", name: "Dr. Arvind Kumar", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747106/arvind_kumar_gsgvrr.jpg" },
+            { role: "Mess Warden - Canary", name: "Dr. Akash Subhash Awale", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747119/Akash_Subhash_Awale_sfbaah.jpg" },
+            { role: "Mess Warden - Fulgar", name: "Dr. Soumyadip Das", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747077/Soumyadip_Das_yuepd1.jpg" },
+            { role: "Mess Warden - Dedhar", name: "Dr. Ved Prakash Ranjan", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747072/Ved_Prakash_jiuzku.png" },
+            { role: "Mess Warden - Anz", name: "Dr. Guru B Ramani", img: "/committee/guru-ramani.jpg" },
+            { role: "Mess Warden - Egret", name: "Dr. Riya Bhowmik", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709311/warden_egret_kbovjx.jpg" },
+            { role: "Mess Manager", name: "Ms. Rehana Rasool", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747088/rehana_pic_tcrwf2.jpg" },
+            { role: "Mess Secretary", name: "Ujjwal Gupta", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747073/Ujjwal_Gupta_Mess_secretary_mpxpzz.jpg" },
+            { role: "General Secretary", name: "Ayush Sharma", img: "/committee/ayush-sharma.jpg" },
+            { role: "Mess Committee Member", name: "Devansh Agrawal", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747101/DevanshAgrawal_2023ume0254_Fulgar2ndFloor_mp3qa5.jpg" },
+            { role: "Mess Committee Member", name: "Gayatri", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747095/Gayatri_2025PMD0057_lrsn3l.jpg" },
+            { role: "Mess Committee Member", name: "Gurpreet Singh", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747126/gurpreet_singh_2024ucs0091_egret_ivnsur.jpg" },
+            { role: "Mess Committee Member", name: "Anish Kumar Yadav", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747114/anishyadav_scvffb.jpg" },
+            { role: "Mess Committee Member", name: "Sidharth Gupta", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747081/Sidharth_Gupta_2024UMA0228_Dedhar_vrrkap.jpg" },
+            { role: "Mess Committee Member", name: "Yashika", img: "/committee/yashika.jpg" },
+            { role: "Mess Committee Member", name: "Ashad Mansoori", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747106/Ashad_2023UME0247_2ndfloor_govgtu.jpg" },
+            { role: "Mess Committee Member", name: "Shubham Kumar", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747505/Shubham_Kumar_page-0001_n5dzxn.jpg" },
+            { role: "Mess Committee Member", name: "Riant Dadra", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747123/riant_snt1l8.jpg" },
+          ].map((person, i) => (
+            <div key={i} className="bg-blue-50 rounded-xl shadow-md overflow-hidden text-center">
+              <div className="relative w-full h-56 bg-gray-100 flex items-center justify-center">
+                <Image
+                  src={person.img}
+                  alt={person.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-[#003f87]">{person.role}</h3>
+                <p className="text-gray-700 font-semibold mt-1">{person.name}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <Footer />
     </>
