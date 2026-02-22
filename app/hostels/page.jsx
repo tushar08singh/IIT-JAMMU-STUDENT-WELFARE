@@ -126,15 +126,23 @@ export default function Page() {
       <Header />
 
       {/* Top Hostel Image */}
-      <div className="relative w-full h-[60vh] mt-16">
-        <Image
-          src="https://source.unsplash.com/1600x900/?hostel,university,campus"
-          alt="Hostel Banner"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+      <div className="relative w-full max-w-[1200px] h-[420px] mx-auto rounded-xl overflow-hidden mt-6">
+            <Image
+              alt="Hostel Facilities IIT Jammu"
+              src="/messes/mess-hero.jpg"
+              fill
+              className="object-cover brightness-90"
+            />
+            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 md:px-16">
+              <p className="text-white text-5xl sm:text-6xl md:text-7xl font-bold drop-shadow-lg">
+                Hostel Facilities
+              </p>
+              <p className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold drop-shadow-md mt-2">
+                IIT Jammu
+              </p>
+            </div>
+          </div>
 
       <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-20 mt-16">
         <div className="text-center mb-12">
