@@ -3,87 +3,7 @@
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
-const contactTeam = [
-  {
-    role: "Dean, Student Affairs",
-    name: "Dr. Anup Shukla",
-    email: "dean.sw@iitjammu.ac.in",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1768641536/WhatsApp_Image_2026-01-17_at_14.12.59_1_bselui.jpg",
-  },
-   {
-    role: "Associate Dean, Student Affairs",
-    name: "Dr. Devi Lal",
-    email: "ad.sw@iitjammu.ac.in",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1768641537/WhatsApp_Image_2026-01-17_at_14.12.59_ap6x4e.jpg",
-  },
-   {
-    role: "Assistant Registrar, Student Affairs",
-    name: "Dr. R.P. Prajapat",
-    email: "ar.sw@iitjammu.ac.in",
-    image: "/assistant registrar final.png",
-  },
-   {
-    role: "OIC, Student Affairs",
-    name: "Mr Vishal Begnehal",
-    email: "iitjmu80146@@iitjammu.ac.in",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1768643274/WhatsApp_Image_2026-01-17_at_15.13.52_mtjplz.jpg",
-  },
-  {
-    role: "General Secretary",
-    name: "Ayush Sharma",
-    email: "secretary.student.sa@iitjammu.ac.in",
-    image: "/general secretary.jpeg",
-  },
-  {
-    role: "Academic Secretary",
-    name: "Aman Pathak",
-    email: "academic.secretary@iitjammu.ac.in",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1768641536/WhatsApp_Image_2026-01-17_at_14.12.59_2_jcbwsp.jpg",
-  },
-  {
-    role: "Cultural Secretary",
-    name: "Saumya Gupta",
-    email: "cultural.secretary@iitjammu.ac.in",
-    image: "/cultural secretary.jpeg",
-  },
-  {
-    role: "Sports Secretary",
-    name: "Sandeep Moond",
-    email: "sports.secretary@iitjammu.ac.in",
-    image: "/sports secretary.png",
-  },
-  {
-    role: "Wellness Secretary",
-    name: "Owais Ansar",
-    email: "wellness.secretary@iitjammu.ac.in",
-    image: "/wellness secretary.png",
-  },
-  {
-    role: "Hostel Secretary, Boys",
-    name: "Mehul gupta",
-    email: "hsec.boys@iitjammu.ac.in",
-    image: "/hostel secretary boys.jpeg",
-  },
-  {
-    role: "Hostel Secretary,Girls",
-    name: "Mishthi Agarwal",
-    email: "hsec.girls@iitjammu.ac.in",
-    image: "/hostel secretary girls.jpg",
-  },
-  {
-    role: "Mess Secretary",
-    name: "Ujjwal Gupta",
-    email: "mess.secretary@iitjammu.ac.in",
-    image: "/mess secretary.jpeg",
-  },
-  {
-    role: "Academic Secretary, PG",
-    name: "Chirag Prajapati",
-    email: "pgacad.secretary@iitjammu.ac.in",
-    image: "/pg academic secretary.jpg",
-  },
-];
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function ContactUsTeam() {
   return (
@@ -95,36 +15,77 @@ export default function ContactUsTeam() {
           Contact Student Affairs Team
         </h1>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          {contactTeam.map((member, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden"
-            >
-              <div className="relative w-full h-72">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="p-6 text-center">
-                <h3 className="text-lg font-bold text-[#0b3c7d]">
-                  {member.role}
-                </h3>
-                <p className="text-gray-700 mt-1">{member.name}</p>
-
-                <a
-                  href={`mailto:${member.email}`}
-                  className="inline-block mt-4 text-sm font-semibold text-white bg-[#0b3c7d] px-4 py-2 rounded-full hover:bg-[#082f63] transition"
-                >
-                  {member.email}
-                </a>
-              </div>
+        {/* ================= CONTACT CARD ================= */}
+        <div className="max-w-md mx-auto mb-16">
+          <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden">
+            <div className="relative w-full h-72">
+              <Image
+                src="/assistant registrar final.png"
+                alt="Dr. R. P. Prajapat"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover"
+              />
             </div>
-          ))}
+
+            <div className="p-6 text-center space-y-3">
+              <h3 className="text-lg font-bold text-[#0b3c7d]">
+                Assistant Registrar, Student Affairs
+              </h3>
+              <p className="text-gray-700">Dr. R. P. Prajapat</p>
+
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Office of Student Affairs, Indian Institute of Technology
+                Jammu, Jagti Campus, Jammu – 181221, J&K, India
+              </p>
+
+              <a
+                href="mailto:ar.sw@iitjammu.ac.in"
+                className="inline-block mt-4 text-sm font-semibold text-white bg-[#0b3c7d] px-5 py-2 rounded-full hover:bg-[#082f63] transition"
+              >
+                ar.sw@iitjammu.ac.in
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* ================= SOCIAL MEDIA ================= */}
+        <div className="max-w-xl mx-auto bg-white rounded-xl shadow-md p-8 text-center">
+          <h2 className="text-2xl font-bold text-[#0b3c7d] mb-6">
+            Connect with IIT Jammu
+          </h2>
+
+          <div className="flex justify-center gap-8">
+            <a
+              href="https://www.linkedin.com/school/iitjammu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-2 text-[#0b3c7d] hover:text-[#082f63] transition"
+            >
+              <FaLinkedin size={28} />
+              <span className="text-sm font-semibold">LinkedIn</span>
+            </a>
+
+            <a
+              href="https://twitter.com/IITJammu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-2 text-[#0b3c7d] hover:text-[#082f63] transition"
+            >
+              <FaTwitter size={28} />
+              <span className="text-sm font-semibold">Twitter</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/iit.jammu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-2 text-[#0b3c7d] hover:text-[#082f63] transition"
+            >
+              <FaInstagram size={28} />
+              <span className="text-sm font-semibold">Instagram</span>
+            </a>
+          </div>
         </div>
       </main>
 

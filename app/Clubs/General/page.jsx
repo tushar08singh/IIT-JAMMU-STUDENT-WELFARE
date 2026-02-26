@@ -34,17 +34,50 @@ const PICs = [
   { name: 'Dr. Kishore Kumar Jagini', photo: '/PIC wellbeing.jpeg', club: 'Wellbeing Club' }
 ]
 
+const clubVisionMission = {
+  "Nature and Adventure Club": {
+    vision: "To promote environmental awareness and adventurous spirit among students.",
+    mission: ["Organize treks and nature camps", "Promote eco-friendly practices", "Encourage outdoor exploration"]
+  },
+  "Kritash Club": {
+    vision: "To encourage creativity and innovation through social initiatives.",
+    mission: ["Promote community service", "Organize awareness drives", "Encourage leadership development"]
+  },
+  "RE4M Club": {
+    vision: "To drive sustainable practices and responsible resource management.",
+    mission: ["Promote recycling initiatives", "Conduct sustainability workshops", "Encourage green campus initiatives"]
+  },
+  "Mesh Club": {
+    vision: "To create a platform that inspires learning, innovation, and meaningful change through interaction with leaders and experts from diverse fields.",
+    mission: [
+      "Organize educational talks and speaker sessions with esteemed professionals",
+      "Expose students to emerging ideas, research, and innovation",
+      "Encourage interdisciplinary learning and critical thinking",
+      "Inspire students to become change-makers in society"
+    ]
+  },
+  "Ek Bharat Shreshtha Bharat": {
+    vision: "To promote unity in diversity and cultural exchange.",
+    mission: ["Organize cultural exchange programs", "Celebrate regional diversity", "Promote national integration"]
+  },
+  "Wellbeing Club": {
+    vision: "To foster mental, physical, and emotional wellbeing of students.",
+    mission: ["Conduct wellness workshops", "Promote mental health awareness", "Encourage healthy lifestyle practices"]
+  }
+};
+
 const secretary = {
   name: "Ayush Sharma",
   photo: "/general secretary.jpeg",
   post: "General Secretary"
 }
 
-const Page = () => {
+export default function Page() {
   const [selectedClub, setSelectedClub] = useState(null)
 
   const clubPICs = PICs.filter(p => p.club === selectedClub?.name)
   const clubCoordinators = coordinators.filter(c => c.club === selectedClub?.name)
+  const visionData = clubVisionMission[selectedClub?.name];
 
   return (
     <>
@@ -54,12 +87,10 @@ const Page = () => {
       <div className="relative w-full max-w-[1200px] h-[500px] mx-auto rounded-xl overflow-hidden mt-6">
         <Image alt="General Council Clubs" src="/mainiit.png" fill className="object-cover blur-[1.5px] brightness-90" />
         <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 md:px-16">
-          <p className="text-[#003f87]
- text-5xl sm:text-6xl md:text-8xl font-bold drop-shadow-lg">
+          <p className="text-[#003f87] text-5xl sm:text-6xl md:text-8xl font-bold drop-shadow-lg">
             General Council
           </p>
-          <p className="text-[#003f87]
- text-3xl sm:text-4xl md:text-5xl font-semibold drop-shadow-md mt-2">
+          <p className="text-[#003f87] text-3xl sm:text-4xl md:text-5xl font-semibold drop-shadow-md mt-2">
             IIT Jammu
           </p>
         </div>
@@ -68,7 +99,7 @@ const Page = () => {
       {/* Secretary */}
       <div className="max-w-sm mx-auto py-16 sm:py-20 mt-12 sm:mt-16 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl shadow-md flex flex-col items-center px-6">
         <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden mb-6">
-          <Image src="/general secretary.jpeg" alt={secretary.name} fill className="object-cover" />
+          <Image src={secretary.photo} alt={secretary.name} fill className="object-cover" />
         </div>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#003f87] text-center">
           {secretary.name}
@@ -87,12 +118,18 @@ const Page = () => {
           {clubs.map((club, index) => (
             <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col">
               <div
-                className="relative w-full h-64 cursor-pointer group"
+                className="group relative w-full aspect-[4/3] sm:h-64 cursor-pointer overflow-hidden bg-white"
                 onClick={() => setSelectedClub(club)}
               >
-                <Image src={club.image} alt={club.name} fill className="object-cover transition-transform duration-300 hover:scale-105" />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition" />
+                <Image
+                  src={club.image}
+                  alt={club.name}
+                  fill
+                  className="object-contain sm:object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300" />
               </div>
+
               <div className="p-4 sm:p-6 flex flex-col justify-between flex-grow">
                 <h3 className="text-xl sm:text-2xl font-bold text-[#003f87] mb-4">{club.name}</h3>
                 <a href={club.link} target="_blank" rel="noopener noreferrer" className="mt-auto inline-flex items-center justify-center gap-2 text-white bg-[#003f87] hover:bg-[#06376e] px-4 py-2 rounded-lg font-semibold transition">
@@ -104,61 +141,52 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* MODAL */}
       {selectedClub && (
-        <div
-          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center px-4"
-          onClick={() => setSelectedClub(null)}
-        >
-          <div
-            className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header */}
+        <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-4" onClick={() => setSelectedClub(null)}>
+          <div className="bg-white rounded-2xl max-w-5xl w-full overflow-hidden" onClick={e => e.stopPropagation()}>
             <div className="relative h-48">
               <Image src={selectedClub.image} alt={selectedClub.name} fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-              <h2 className="absolute bottom-4 left-6 text-3xl sm:text-4xl font-bold text-white">
-                {selectedClub.name}
-              </h2>
-              <button
-                onClick={() => setSelectedClub(null)}
-                className="absolute top-4 right-4 bg-white/90 hover:bg-white text-black px-3 py-1 rounded-full font-bold shadow"
-              >
-                ✕
-              </button>
+              <div className="absolute inset-0 bg-black/60" />
+              <h2 className="absolute bottom-4 left-6 text-3xl font-bold text-white">{selectedClub.name}</h2>
+              <button onClick={() => setSelectedClub(null)} className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full font-bold">✕</button>
             </div>
 
-            {/* Body */}
-            <div className="p-6 sm:p-8 space-y-10 max-h-[70vh] overflow-y-auto">
-              <div>
-                <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Person In-Charge (PICs)</h3>
-                <div className="flex flex-wrap gap-4">
+            <div className="p-6 max-h-[70vh] overflow-y-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="space-y-8">
+                  <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Person In-Charge</h3>
                   {clubPICs.map((p, i) => (
-                    <div key={i} className="flex items-center gap-4 bg-blue-50 rounded-xl p-4 w-full sm:w-[48%] md:w-[45%] hover:shadow-lg transition">
-                      <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0">
+                    <div key={i} className="flex items-center gap-4 bg-blue-50 p-4 rounded-xl mb-3">
+                      <div className="relative w-16 h-16 rounded-full overflow-hidden">
                         <Image src={p.photo} alt={p.name} fill className="object-cover" />
                       </div>
-                      <p className="font-semibold text-gray-800">{p.name}</p>
+                      <p className="font-semibold">{p.name}</p>
                     </div>
                   ))}
-                </div>
-              </div>
 
-              <div>
-                <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Coordinators</h3>
-                <div className="flex flex-wrap gap-4">
+                  <h3 className="text-2xl font-semibold text-[#003f87] mt-6 mb-4">Coordinators</h3>
                   {clubCoordinators.map((c, i) => (
-                    <div key={i} className="flex items-center gap-4 bg-green-50 rounded-xl p-4 w-full sm:w-[48%] md:w-[45%] hover:shadow-lg transition">
-                      <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0">
+                    <div key={i} className="flex items-center gap-4 bg-green-50 p-4 rounded-xl mb-3">
+                      <div className="relative w-16 h-16 rounded-full overflow-hidden">
                         <Image src={c.photo} alt={c.name} fill className="object-cover" />
                       </div>
                       <div>
-                        <p className="font-semibold text-gray-800">{c.name}</p>
+                        <p className="font-semibold">{c.name}</p>
                         <span className="text-sm text-gray-600">{c.role || "Coordinator"}</span>
                       </div>
                     </div>
                   ))}
+                </div>
+
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Vision & Mission</h3>
+                  <p className="text-gray-700 mb-4">{visionData?.vision}</p>
+                  <ul className="list-disc list-inside space-y-2 text-gray-700">
+                    {visionData?.mission.map((m, i) => (
+                      <li key={i}>{m}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
@@ -168,7 +196,5 @@ const Page = () => {
 
       <Footer />
     </>
-  )
+  );
 }
-
-export default Page
