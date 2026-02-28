@@ -23,10 +23,10 @@ const Page = () => {
 
   /* ================= HERO SLIDES ================= */
   const heroImages = [
-    "/sports.jpg",
-    "/sports.jpg",
-    "/sports.jpg",
-    "/sports.jpg",
+    "/hero1.jpg",
+    "/hero2.jpg",
+    "/hero3.jpg",
+    "/hero4.jpg",
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -107,7 +107,7 @@ const Page = () => {
 
       <main className="relative">
         {/* ================= HERO SLIDESHOW ================= */}
-        <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[65vh] overflow-hidden">
+        <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] overflow-hidden">
           {heroImages.map((src, index) => (
             <Image
               key={index}
