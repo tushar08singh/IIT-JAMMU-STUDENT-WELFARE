@@ -130,7 +130,7 @@ export default function TeamPage() {
               { role: "Hostel Affairs Secretary (Boys)", name: "Mehul Gupta", img: "/hostel secretary boys.jpeg" },
               { role: "Sports Secretary", name: "Sandeep Moond", img: "/sports secretary.png" },
               { role: "Wellness Secretary", name: "Owais Ansar", img: "/wellness secretary.png" },
-              { role: "Mess Secretary", name: "Ujjwal Gupta", img: "/mess secretary.jpg" }
+              { role: "Mess Secretary", name: "Ujjwal Gupta", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747073/Ujjwal_Gupta_Mess_secretary_mpxpzz.jpg" }
             ].map((member, i) => (
               <div
                 key={i}
