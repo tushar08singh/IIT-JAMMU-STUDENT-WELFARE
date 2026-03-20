@@ -103,17 +103,30 @@ export default function Page() {
       <Header />
 
       {/* HERO */}
-      <div className="relative max-w-[1200px] mx-auto h-[400px] rounded-xl overflow-hidden mt-6">
-        <Image src="/drone.jpg" alt="Academic Council" fill className="object-cover brightness-90" />
-        <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-12">
-          <h1 className="text-[#003f87] text-4xl sm:text-6xl md:text-7xl font-bold">
-            Academic Council
-          </h1>
-          <p className="text-[#003f87] text-2xl sm:text-4xl font-semibold mt-2">
-            IIT Jammu
-          </p>
-        </div>
-      </div>
+     {/* LOGO CARD */}
+<div className="max-w-6xl mx-auto mt-10 px-4">
+  <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center">
+
+    {/* LOGO CONTAINER (PERFECT RATIO) */}
+    <div className="relative w-[260px] aspect-[460/800]">
+      <Image
+        src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1774034302/WhatsApp_Image_2026-03-20_at_22.28.16_ba88mk.jpg"
+        alt="Academic Council Logo"
+        fill
+        className="object-contain"
+        priority
+      />
+    </div>
+
+    {/* TEXT BELOW LOGO */}
+    {/* <h1 className="text-[#003f87] text-4xl font-bold  text-center">
+      IIT Jammu
+    </h1> */}
+
+   
+
+  </div>
+</div>
 
       {/* ASSOCIATE DEAN + SECRETARY */}
      {/* ASSOCIATE DEAN + SECRETARY */}

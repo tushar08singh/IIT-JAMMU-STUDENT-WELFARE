@@ -22,12 +22,12 @@ const clubs = [
 const coordinators = [
   { name: 'Aarav Mehta', photo: '/athletics coordinator.jpg', club: 'Athletics Club' },
   { name: 'Priya Sharma', photo: '/badminton coordinator boys.jpg', club: 'Badminton Club' },
-  { name: 'Priya Sharma', photo: '/badminton coordinator girls.jpg', club: 'Badminton Club' },
+ //{ name: 'Priya Sharma', photo: '/badminton coordinator girls.jpg', club: 'Badminton Club' },
   { name: 'Kavya Nair', photo: '/basketball coordinator boys.jpg', club: 'Basketball Club' },
-  { name: 'Kavya Nair', photo: '/basketball coordinator girls.jpg', club: 'Basketball Club' },
+  //{ name: 'Kavya Nair', photo: '/basketball coordinator girls.jpg', club: 'Basketball Club' },
   { name: 'Rohan Gupta', photo: '/cricket coordinator.jpg', club: 'Cricket Club' },
   { name: 'Sanya Kapoor', photo: '/chess coordinator boys.jpg', club: 'Chess Club' },
-  { name: 'Sanya Kapoor', photo: '/chess coordinator girls.jpg', club: 'Chess Club' },
+  //{ name: 'Sanya Kapoor', photo: '/chess coordinator girls.jpg', club: 'Chess Club' },
   { name: 'Ishaan Verma', photo: '/football coordinator.jpg', club: 'Football Club' },
   { name: 'Mehul Jain', photo: '/e-sports coordinator.jpg', club: 'E-Sports Club' },
   { name: 'Tanya Singh', photo: '/tt coordinator.jpg', club: 'Table Tennis Club' },
@@ -168,17 +168,30 @@ const Page = () => {
       <Header />
 
       {/* Hero */}
-      <div className="relative w-full max-w-[1200px] h-[500px] mx-auto rounded-xl overflow-hidden mt-6">
-        <Image alt="Sports Council" src="/sports.jpg" fill className="object-cover blur-[1.5px] brightness-90" />
-        <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 md:px-16">
-          <p className="text-[#003f87] text-5xl sm:text-6xl md:text-8xl font-bold drop-shadow-lg">
-            Sports Council
-          </p>
-          <p className="text-[#003f87] text-3xl sm:text-4xl md:text-5xl font-semibold drop-shadow-md mt-2">
-            IIT Jammu
-          </p>
-        </div>
-      </div>
+     {/* LOGO CARD */}
+<div className="max-w-6xl mx-auto mt-10 px-4">
+  <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center">
+
+    {/* LOGO CONTAINER (PERFECT RATIO) */}
+    <div className="relative w-[260px] aspect-[460/800]">
+      <Image
+        src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1774033659/Untitled_460_x_800_px_xklc46.png"
+        alt="Sports Council Logo"
+        fill
+        className="object-contain"
+        priority
+      />
+    </div>
+
+    {/* TEXT BELOW LOGO */}
+    {/* <h1 className="text-[#003f87] text-4xl font-bold text-center">
+      IIT Jammu
+    </h1> */}
+
+   
+
+  </div>
+</div>
 
       {/* Secretary */}
       {/* ASSOCIATE DEAN + SPORTS SECRETARY */}
@@ -218,7 +231,7 @@ const Page = () => {
       <div className="relative z-10">
         <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
           <Image
-            src="/sports secretary.jpeg"
+            src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941898/sports_secretary_iqeyth.png"
             alt="Sandeep Moond"
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-110"

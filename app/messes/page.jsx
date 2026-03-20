@@ -120,7 +120,7 @@ export default function Page() {
                 </h3>
 
                 <p>📍 {mess.location}</p>
-                <p>🏢 {mess.type}</p>
+                {/* <p>🏢 {mess.type}</p> */}
                 <p>👥 {mess.capacity}</p>
                 <p className="mt-2">📞 {mess.contact}</p>
               </div>
