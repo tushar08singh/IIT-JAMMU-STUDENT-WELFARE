@@ -19,22 +19,29 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto flex items-center justify-between p-4">
-        {/* Left: Logo */}
+        {/* Left: IIT Logo */}
         <div className="flex items-center space-x-3">
-          <Link href="/" className="flex items-center transition duration-150 ease-in-out hover:opacity-80">
+          <Link href="https://www.iitjammu.ac.in/" className="flex items-center transition duration-150 ease-in-out hover:opacity-80">
             <Image
-              src="/iit2.png"
+              src="https://res.cloudinary.com/dabviijid/image/upload/v1773992761/iit2updated_ip6fmi.png"
               alt="College Logo"
-              width={200}
-              height={40}
+              width={85}
+              height={50}
               priority
               className="object-contain"
             />
           </Link>
         </div>
 
-        {/* Center: Student Affairs (Hidden on small screens) */}
-        <div className="hidden md:flex flex-grow justify-center">
+        {/* Center: SAC Logo + Student Affairs heading */}
+        <div className="hidden md:flex flex-grow justify-center items-center gap-3">
+          <Image
+            src="https://res.cloudinary.com/dabviijid/image/upload/v1773993041/WhatsApp_Image_2026-03-11_at_11.24.42_AM-removebg-preview_tddjlb.png"
+            alt="Students Activities Council Logo"
+            width={90}
+            height={90}
+            className="object-contain"
+          />
           <h1 className="text-2xl font-extrabold uppercase tracking-widest text-gray-800">
             Student Affairs
           </h1>
