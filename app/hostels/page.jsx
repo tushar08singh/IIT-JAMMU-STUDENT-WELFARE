@@ -41,8 +41,8 @@ const hostels = [
     name: "Egret Hostel (Girls)",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774092815/IMG-20260320-WA0004.jpg_mg1dal.jpg",
     warden: {
-      name: "Ms. Sunita Rao",
-      photo: "/hostels/egret-warden.jpg",
+      name: "Dr. Riya Bhowmik",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709311/warden_egret_kbovjx.jpg",
       phone: "+91 9765432109",
       email: "sunita.rao@iitjammu.ac.in",
     },
@@ -82,14 +82,14 @@ const hostels = [
     name: "Dedhar Hostel (Girls)",
     image: "https://source.unsplash.com/1200x800/?student,hostel,dormitory",
     warden: {
-      name: "Mr. Anil Singh",
-      photo: "/hostels/dedhar-warden.jpg",
+      name: "Dr. Garima Singh",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709322/warden_dedhar_f7n6dg.jpg",
       phone: "+91 9988776655",
       email: "anil.singh@iitjammu.ac.in",
     },
     caretaker: {
-      name: "Mr. Ramesh Thakur",
-      photo: "/hostels/dedhar-caretaker.jpg",
+      name: "Tasaduq Gul",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709332/caretaker_dedhar_nb0d5l.jpg",
       phone: "+91 9090909090",
       email: "ramesh.thakur@iitjammu.ac.in",
     },
@@ -111,22 +111,7 @@ const hostels = [
     },
   },
  
-  {
-    name: "Egret Hostel (Girls)",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774092815/IMG-20260320-WA0004.jpg_mg1dal.jpg",
-    warden: {
-      name: "Ms. Sunita Rao",
-      photo: "/hostels/egret-warden.jpg",
-      phone: "+91 9765432109",
-      email: "sunita.rao@iitjammu.ac.in",
-    },
-    caretaker: {
-      name: "Ms. Pooja Devi",
-      photo: "/hostels/egret-caretaker.jpg",
-      phone: "+91 9876540987",
-      email: "pooja.devi@iitjammu.ac.in",
-    },
-  },
+  
 ];
 
 /* ================= PAGE ================= */
