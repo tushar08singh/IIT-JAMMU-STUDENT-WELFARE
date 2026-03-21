@@ -98,7 +98,7 @@ export default function TeamPage() {
     <div className="bg-white rounded-2xl shadow-md overflow-hidden">
       <div className="relative w-full aspect-[4/5]">
         <Image
-          src="/oic.jpg"  // replace if needed
+          src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1768643274/WhatsApp_Image_2026-01-17_at_15.13.52_mtjplz.jpg"  // replace if needed
           alt="Mr. Vishal Begnehal"
           fill
           className="object-cover"

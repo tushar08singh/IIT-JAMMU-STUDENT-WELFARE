@@ -9,39 +9,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 /* ================= DATA ================= */
 
 const messes = [
-  {
-    name: "Canary Mess",
-    location: "L-112",
-    capacity: "400+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081543/WhatsApp_Image_2026-03-21_at_12.53.37_m1lmqn.jpg",
-    timings: {
-      breakfast: "7:30 AM – 9:30 AM",
-      lunch: "12:30 PM – 2:30 PM",
-      dinner: "7:30 PM – 9:30 PM",
-    },
-  },
-  {
-    name: "Dedhar Mess",
-    location: "L-120",
-    capacity: "350+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081499/WhatsApp_Image_2026-03-21_at_12.53.41_z36ha2.jpg",
-    timings: {
-      breakfast: "7:30 AM – 9:30 AM",
-      lunch: "12:30 PM – 2:30 PM",
-      dinner: "7:30 PM – 9:30 PM",
-    },
-  },
-  {
-    name: "Egret Mess",
-    location: "1B",
-    capacity: "300+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081450/WhatsApp_Image_2026-03-21_at_12.53.35_ihcqzm.jpg",
-    timings: {
-      breakfast: "7:30 AM – 9:30 AM",
-      lunch: "12:30 PM – 2:30 PM",
-      dinner: "7:30 PM – 9:30 PM",
-    },
-  },
+
   {
     name: "Annapurna Mess (2nd Floor)",
     location: "Fulgar – 1C",
@@ -64,6 +32,41 @@ const messes = [
       dinner: "7:30 PM – 9:30 PM",
     },
   },
+   {
+    name: "Egret Mess",
+    location: "1B",
+    capacity: "300+ students",
+    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081450/WhatsApp_Image_2026-03-21_at_12.53.35_ihcqzm.jpg",
+    timings: {
+      breakfast: "7:30 AM – 9:30 AM",
+      lunch: "12:30 PM – 2:30 PM",
+      dinner: "7:30 PM – 9:30 PM",
+    },
+  },
+  {
+    name: "Canary Mess",
+    location: "L-112",
+    capacity: "400+ students",
+    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081543/WhatsApp_Image_2026-03-21_at_12.53.37_m1lmqn.jpg",
+    timings: {
+      breakfast: "7:30 AM – 9:30 AM",
+      lunch: "12:30 PM – 2:30 PM",
+      dinner: "7:30 PM – 9:30 PM",
+    },
+  },
+  {
+    name: "Dedhar Mess",
+    location: "L-120",
+    capacity: "350+ students",
+    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081499/WhatsApp_Image_2026-03-21_at_12.53.41_z36ha2.jpg",
+    timings: {
+      breakfast: "7:30 AM – 9:30 AM",
+      lunch: "12:30 PM – 2:30 PM",
+      dinner: "7:30 PM – 9:30 PM",
+    },
+  },
+ 
+  
 ];
 
 const committee = [

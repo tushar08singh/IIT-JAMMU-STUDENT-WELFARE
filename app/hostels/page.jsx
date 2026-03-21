@@ -8,6 +8,51 @@ import Footer from "../components/Footer";
 /* ================= DATA ================= */
 
 const hostels = [
+
+   {
+    name: "Fulgar Hostel (Boys)",
+    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091910/IMG_4600_ywthft.jpg",
+    warden: {
+      name: "Krishna Mohan Gupta",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709289/krishna_gmox4k.jpg",
+      phone: "+91 ",
+      email: "warden.fulgar@iitjammu.ac.in",
+    },
+    caretaker: {
+      name: "Majid Bashir",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709377/majid_jvbkdo.jpg",
+      phone: "+91 ",
+      email: "caretaker.fulgar@iitjammu.ac.in",
+    },
+    extraCaretaker: {
+      name: "Anish Koul",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709299/anish_jfjwap.jpg",
+      phone: "+91 ",
+      email: "caretaker.fulgar@iitjammu.ac.in",
+    },
+    wellnessWarden: {
+      name: "Sumit Raj Ghosh",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709345/sumit_kikdod.jpg",
+      phone: "+91 9709111227",
+    },
+  },
+
+   {
+    name: "Egret Hostel (Girls)",
+    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774092815/IMG-20260320-WA0004.jpg_mg1dal.jpg",
+    warden: {
+      name: "Ms. Sunita Rao",
+      photo: "/hostels/egret-warden.jpg",
+      phone: "+91 9765432109",
+      email: "sunita.rao@iitjammu.ac.in",
+    },
+    caretaker: {
+      name: "Ms. Pooja Devi",
+      photo: "/hostels/egret-caretaker.jpg",
+      phone: "+91 9876540987",
+      email: "pooja.devi@iitjammu.ac.in",
+    },
+  },
   {
     name: "Braeg Hostel (Boys)",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091838/WhatsApp_Image_2026-03-21_at_16.46.37_wthdth.jpg",
@@ -65,33 +110,7 @@ const hostels = [
       email: "caretaker.canary@iitjammu.ac.in",
     },
   },
-  {
-    name: "Fulgar Hostel (Boys)",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091910/IMG_4600_ywthft.jpg",
-    warden: {
-      name: "Krishna Mohan Gupta",
-      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709289/krishna_gmox4k.jpg",
-      phone: "+91 ",
-      email: "warden.fulgar@iitjammu.ac.in",
-    },
-    caretaker: {
-      name: "Majid Bashir",
-      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709377/majid_jvbkdo.jpg",
-      phone: "+91 ",
-      email: "caretaker.fulgar@iitjammu.ac.in",
-    },
-    extraCaretaker: {
-      name: "Anish Koul",
-      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709299/anish_jfjwap.jpg",
-      phone: "+91 ",
-      email: "caretaker.fulgar@iitjammu.ac.in",
-    },
-    wellnessWarden: {
-      name: "Sumit Raj Ghosh",
-      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709345/sumit_kikdod.jpg",
-      phone: "+91 9709111227",
-    },
-  },
+ 
   {
     name: "Egret Hostel (Girls)",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774092815/IMG-20260320-WA0004.jpg_mg1dal.jpg",
