@@ -14,7 +14,6 @@ const messes = [
     location: "L-112",
     capacity: "400+ students",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081543/WhatsApp_Image_2026-03-21_at_12.53.37_m1lmqn.jpg",
-    contact: "+91 XXXXXXXX",
     timings: {
       breakfast: "7:30 AM – 9:30 AM",
       lunch: "12:30 PM – 2:30 PM",
@@ -26,7 +25,6 @@ const messes = [
     location: "L-120",
     capacity: "350+ students",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081499/WhatsApp_Image_2026-03-21_at_12.53.41_z36ha2.jpg",
-    contact: "+91 XXXXXXXX",
     timings: {
       breakfast: "7:30 AM – 9:30 AM",
       lunch: "12:30 PM – 2:30 PM",
@@ -38,7 +36,6 @@ const messes = [
     location: "1B",
     capacity: "300+ students",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081450/WhatsApp_Image_2026-03-21_at_12.53.35_ihcqzm.jpg",
-    contact: "+91 XXXXXXXX",
     timings: {
       breakfast: "7:30 AM – 9:30 AM",
       lunch: "12:30 PM – 2:30 PM",
@@ -50,7 +47,6 @@ const messes = [
     location: "Fulgar – 1C",
     capacity: "450+ students",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081319/WhatsApp_Image_2026-03-21_at_12.53.39_ox8k2f.jpg",
-    contact: "+91 XXXXXXXX",
     timings: {
       breakfast: "7:30 AM – 9:30 AM",
       lunch: "12:30 PM – 2:30 PM",
@@ -62,7 +58,6 @@ const messes = [
     location: "Fulgar – 1C",
     capacity: "450+ students",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081319/WhatsApp_Image_2026-03-21_at_12.53.39_ox8k2f.jpg",
-    contact: "+91 XXXXXXXX",
     timings: {
       breakfast: "7:30 AM – 9:30 AM",
       lunch: "12:30 PM – 2:30 PM",
@@ -113,45 +108,51 @@ export default function Page() {
       {/* LOGO CARD */}
       <div className="max-w-6xl mx-auto mt-10 px-4">
         <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center">
-
           <div className="relative w-[260px] aspect-[460/800]">
             <Image
               src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1774080565/WhatsApp_Image_2026-03-21_at_03.16.56_db9we9.jpg"
               alt="Mess Logo"
               fill
               className="object-contain"
-              priority
             />
           </div>
-
-          <h1 className="text-[#003f87] text-4xl font-bold ">
-           IIT Jammu
+          <h1 className="text-[#003f87] text-4xl font-bold mt-4">
+            IIT Jammu
           </h1>
-
-          
         </div>
       </div>
 
       {/* MESS SECTION */}
       <section className="bg-blue-50 py-16 mt-10">
-        <div className="max-w-6xl mx-auto space-y-6 px-6">
+        <div className="max-w-6xl mx-auto space-y-10 px-6">
           {messes.map((mess, i) => (
-            <div key={i} className="bg-white rounded-2xl shadow-md flex flex-col md:flex-row overflow-hidden">
+            <div key={i} className="bg-white rounded-2xl shadow-md p-6 text-center">
 
-              <div className="relative w-full md:w-[260px] aspect-[4/5] bg-gray-100">
-                <Image src={mess.image} alt={mess.name} fill className="object-contain p-3" />
+              {/* BIG CENTERED IMAGE */}
+              <div className="relative w-full max-w-[500px] mx-auto aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden">
+                <Image
+                  src={mess.image}
+                  alt={mess.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
 
-              <div className="flex-1 p-6">
-                <h3 className="text-2xl font-bold text-[#003f87]">{mess.name}</h3>
+              {/* CONTENT BELOW */}
+              <div className="mt-6 space-y-2">
+                <h3 className="text-2xl font-bold text-[#003f87]">
+                  {mess.name}
+                </h3>
+
                 <p>📍 {mess.location}</p>
                 <p>👥 {mess.capacity}</p>
 
-                <p className="flex items-center gap-2 mt-2">
-                  <FaPhoneAlt /> {mess.contact}
-                </p>
+                <div className="flex justify-center items-center gap-2">
+                  <FaPhoneAlt />
+                  <span>Not Available</span>
+                </div>
 
-                <div className="mt-3 text-sm text-gray-600">
+                <div className="mt-3 text-gray-600">
                   <p>🍳 {mess.timings.breakfast}</p>
                   <p>🍛 {mess.timings.lunch}</p>
                   <p>🌙 {mess.timings.dinner}</p>
