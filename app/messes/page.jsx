@@ -46,7 +46,7 @@ const messes = [
     name: "Annapurna Mess (2nd Floor)",
     location: "Fulgar – 1C",
     capacity: "450+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081319/WhatsApp_Image_2026-03-21_at_12.53.39_ox8k2f.jpg",
+    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091913/IMG_4608_crp7dc.jpg",
     timings: {
       breakfast: "7:30 AM – 9:30 AM",
       lunch: "12:30 PM – 2:30 PM",
@@ -57,7 +57,7 @@ const messes = [
     name: "Annapurna Mess (3rd Floor)",
     location: "Fulgar – 1C",
     capacity: "450+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081319/WhatsApp_Image_2026-03-21_at_12.53.39_ox8k2f.jpg",
+    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091913/IMG_4608_crp7dc.jpg",
     timings: {
       breakfast: "7:30 AM – 9:30 AM",
       lunch: "12:30 PM – 2:30 PM",
