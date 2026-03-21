@@ -5,6 +5,7 @@ import Image from "next/image"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
+
 const hostels = [
   {
     name: "Braeg Hostel (Boys)",
@@ -128,13 +129,94 @@ const hostels = [
     },
   },
 ]
-
 export default function Page() {
   return (
     <>
       <Header />
 
       <section className="bg-gradient-to-r from-blue-50 to-blue-100 py-20 mt-16">
+
+        {/* ================= HIERARCHY ================= */}
+        <div className="max-w-6xl mx-auto mb-20 px-6">
+
+          {/* AD TOP CENTER */}
+          <div className="flex justify-center mb-12">
+            <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-full max-w-sm">
+
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+
+              <div className="relative z-10">
+                <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+                  <Image
+                    src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747106/arvind_kumar_gsgvrr.jpg"
+                    alt="Dr. Arvind Kumar"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <h2 className="text-xl font-bold text-[#003f87]">
+                  Dr. Arvind Kumar
+                </h2>
+                <p className="text-gray-700">
+                  AD - Hostel Affairs
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* SECRETARIES BELOW */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+
+            {/* Boys Secretary */}
+            <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+
+              <div className="relative z-10">
+                <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+                  <Image
+                    src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg"  // replace
+                    alt="Hostel Secretary Boys"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <h2 className="text-xl font-bold text-[#003f87]">
+                  Mehul gupta
+                </h2>
+                <p className="text-gray-700">
+                  Hostel Secretary (Boys)
+                </p>
+              </div>
+            </div>
+
+            {/* Girls Secretary */}
+            <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+
+              <div className="relative z-10">
+                <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+                  <Image
+                    src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg"  // replace
+                    alt="Hostel Secretary Girls"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <h2 className="text-xl font-bold text-[#003f87]">
+                  Mishthi Agarwal
+                </h2>
+                <p className="text-gray-700">
+                  Hostel Secretary (Girls)
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* ================= TITLE ================= */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-[#003f87]">
             Our Hostels
@@ -142,14 +224,13 @@ export default function Page() {
           <div className="w-24 h-1 bg-[#003f87] mx-auto mt-3 rounded-full" />
         </div>
 
+        {/* ================= HOSTELS (UNCHANGED) ================= */}
         <div className="max-w-6xl mx-auto space-y-6 px-6">
           {hostels.map((hostel, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-md hover:shadow-xl transition flex flex-col md:flex-row overflow-hidden"
             >
-              
-
               <div className="flex-1 p-6 text-center">
                 <h3 className="text-2xl font-bold text-[#003f87] mb-4">
                   {hostel.name}
@@ -162,7 +243,6 @@ export default function Page() {
                     { role: "Wellness Warden", data: hostel.wellnessWarden },
                     { role: "Caretaker", data: hostel.caretaker },
                     { role: "Hostel Attendant", data: hostel.attendant },
-                    
                     { role: "Caretaker", data: hostel.extraCaretaker },
                   ].filter(item => item.data).map((item, i) => (
                     <div key={i} className="flex gap-4 bg-blue-50 rounded-xl p-4">
@@ -170,7 +250,7 @@ export default function Page() {
                         <Image src={item.data.photo} alt={item.data.name} fill className="object-cover" />
                       </div>
                       <div>
-                        <span className="inline-block text-xs font-semibold uppercase tracking-wide text-green-700 bg-green-100 px-2 py-0.5 rounded-full mb-1">
+                        <span className="text-xs font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full mb-1 inline-block">
                           {item.role}
                         </span>
                         <p className="font-semibold">{item.data.name}</p>
@@ -180,28 +260,12 @@ export default function Page() {
                     </div>
                   ))}
 
-                  {hostel.floorWardens &&
-                    hostel.floorWardens.map((fw, i) => (
-                      <div key={i} className="flex gap-4 bg-blue-50 rounded-xl p-4">
-                        <div className="relative w-14 h-14 rounded-full overflow-hidden">
-                          <Image src={fw.photo} alt={fw.name} fill className="object-cover" />
-                        </div>
-                        <div>
-                          <span className="inline-block text-xs font-semibold uppercase tracking-wide text-green-700 bg-green-100 px-2 py-0.5 rounded-full mb-1">
-                            Floor Warden {fw.floor}
-                          </span>
-                          <p className="font-semibold">{fw.name}</p>
-                          <p className="text-sm text-gray-600">{fw.phone}</p>
-                          <p className="text-sm text-gray-600">{fw.email}</p>
-                        </div>
-                      </div>
-                    ))}
-
                 </div>
               </div>
             </div>
           ))}
         </div>
+
       </section>
 
       <Footer />

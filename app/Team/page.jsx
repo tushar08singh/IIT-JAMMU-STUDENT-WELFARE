@@ -65,6 +65,58 @@ export default function TeamPage() {
           </div>
         </section>
 
+
+        {/* ================= AR & OIC ================= */}
+<section className="max-w-7xl mx-auto mb-24">
+  <h2 className="text-3xl font-extrabold text-center text-[#0b3c7d] mb-12">
+    Student Affairs Administration
+  </h2>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-3xl mx-auto">
+
+    {/* AR Student Activities */}
+    <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+      <div className="relative w-full aspect-[4/5]">
+        <Image
+          src="/assistant registrar final.png"
+          alt="Dr. R. P. Prajapat"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="p-5 text-center">
+        <h3 className="font-semibold text-[#0b3c7d]">
+          Assistant Registrar (Student Activities)
+        </h3>
+        <p className="text-lg font-bold text-[#0b3c7d] mt-1">
+          Dr. R. P. Prajapat
+        </p>
+      </div>
+    </div>
+
+    {/* OIC Student Activities */}
+    <div className="bg-white rounded-2xl shadow-md overflow-hidden">
+      <div className="relative w-full aspect-[4/5]">
+        <Image
+          src="/oic.jpg"  // replace if needed
+          alt="Mr. Vishal Begnehal"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="p-5 text-center">
+        <h3 className="font-semibold text-[#0b3c7d]">
+          OIC Student Activities
+        </h3>
+        <p className="text-lg font-bold text-[#0b3c7d] mt-1">
+          Mr. Vishal Begnehal
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
         {/* ================= WARDENS ================= */}
         <section className="max-w-7xl mx-auto mb-24">
           <h2 className="text-3xl font-extrabold text-center text-[#0b3c7d] mb-12">
