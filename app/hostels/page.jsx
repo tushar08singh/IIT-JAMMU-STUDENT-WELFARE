@@ -150,62 +150,86 @@ export default function Page() {
         </div>
 
         {/* ===== ADMIN BIG CARDS ===== */}
-       {/* ===== ADMIN BIG CARDS ===== */}
-<div className="max-w-6xl mx-auto px-6 mb-16">
+      {/* ===== ADMIN BIG CARDS (NEW STYLE) ===== */}
+<div className="max-w-6xl mx-auto mt-16 px-4">
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
 
     {/* AD HOSTEL */}
-    <div className="bg-[#c9d3df] rounded-2xl shadow-md p-10 text-center 
-      transition duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+      
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
 
-      <div className="relative w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden">
-        <Image src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1768641537/WhatsApp_Image_2026-01-17_at_14.12.59_ap6x4e.jpg" alt="AD" fill className="object-cover" />
+      <div className="relative z-10">
+        <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+          <Image
+            src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1772463407/ad_hostel_lram8d.jpg"
+            alt="Dr. Devi Lal"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#003f87]">
+          Dr. Yogesh Madhukarrao Nimdeo
+        </h2>
+
+        <p className="text-gray-700">
+          Associate Dean (Hostel Affairs)
+        </p>
       </div>
-
-      <h2 className="text-2xl font-bold text-[#0a3d7c]">
-        Dr. Devi Lal
-      </h2>
-
-      <p className="text-gray-700 mt-2">
-        Associate Dean (Hostel Affairs)
-      </p>
     </div>
 
 
     {/* SECRETARY BOY */}
-    <div className="bg-[#c9d3df] rounded-2xl shadow-md p-10 text-center 
-      transition duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+      
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
 
-      <div className="relative w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden">
-        <Image src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg" alt="Secretary Boy" fill className="object-cover" />
+      <div className="relative z-10">
+        <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+          <Image
+            src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg"
+            alt="Secretary Boy"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#003f87]">
+          Mehul Gupta
+        </h2>
+
+        <p className="text-gray-700">
+          Hostel Secretary (Boy)
+        </p>
       </div>
-
-      <h2 className="text-2xl font-bold text-[#0a3d7c]">
-        Mehul Gupta
-      </h2>
-
-      <p className="text-gray-700 mt-2">
-        Hostel Secretary (Boy)
-      </p>
     </div>
 
 
     {/* SECRETARY GIRL */}
-    <div className="bg-[#c9d3df] rounded-2xl shadow-md p-10 text-center 
-      transition duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+      
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
 
-      <div className="relative w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden">
-        <Image src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg" alt="Secretary Girl" fill className="object-cover" />
+      <div className="relative z-10">
+        <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+          <Image
+            src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg"
+            alt="Secretary Girl"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#003f87]">
+          Mishthi Agarwal
+        </h2>
+
+        <p className="text-gray-700">
+          Hostel Secretary (Girl)
+        </p>
       </div>
-
-      <h2 className="text-2xl font-bold text-[#0a3d7c]">
-        Mishthi Agarwal
-      </h2>
-
-      <p className="text-gray-700 mt-2">
-        Hostel Secretary (Girl)
-      </p>
     </div>
 
   </div>
