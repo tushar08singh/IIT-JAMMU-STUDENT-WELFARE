@@ -28,12 +28,12 @@ const coordinators = [
 ];
 
 const PICs = [
-  { name: "Shafkat Shafi Dar", photo: "/PIC nac.jpg", club: "Nature and Adventure Club" },
-  { name: "Dr. Sanchita Srivastava", photo: "/PIC kritash.jpg", club: "Kritash Club" },
-  { name: "Dr. Chandan Yadav", photo: "/PIC re4m.jpg", club: "RE4M Club" },
-  { name: "Mithu Baidya", photo: "/PIC mesh.jpeg", club: "Mesh Club" },
-  { name: "Dr. Srishilan C", photo: "/PIC music.jpeg", club: "Ek Bharat Shreshtha Bharat" },
-  { name: "Dr. Kishore Kumar Jagini", photo: "/PIC wellbeing.jpeg", club: "Wellbeing Club" }
+  { name: "Dr. Shafkat Shafi Dar", photo: "/PIC nac.jpg", club: "Nature and Adventure Club",profile:"https://iitjammu.ac.in/faculty/~shafkatshafidar" },
+  { name: "Dr. Sanchita Srivastava", photo: "/PIC kritash.jpg", club: "Kritash Club",profile:"https://iitjammu.ac.in/faculty/~sanchitasrivastava" },
+  { name: "Dr. Chandan Yadav", photo: "/PIC re4m.jpg", club: "RE4M Club",profile:"https://www.iitjammu.ac.in/faculty/~chandanyadav" },
+  { name: "Dr. Mithu Baidya", photo: "/PIC mesh.jpeg", club: "Mesh Club",profile:"https://www.iitjammu.ac.in/bsbe/faculty.html?faculty=~mithubaidya" },
+  { name: "Dr. Srishilan C", photo: "/PIC music.jpeg", club: "Ek Bharat Shreshtha Bharat" ,profile:"https://www.iitjammu.ac.in/faculty/~srishilanc"},
+  { name: "Dr. Kishore Kumar Jagini", photo: "/PIC wellbeing.jpeg", club: "Wellbeing Club",profile:"https://www.iitjammu.ac.in/hss/faculty.html?faculty=~kishorekumarjagini" }
 ];
 
 const clubVisionMission = {
@@ -88,35 +88,38 @@ export default function Page() {
 
       {/* HERO */}
       {/* LOGO CARD */}
-<div className="max-w-6xl mx-auto mt-10 px-4">
-  <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center">
 
-    {/* LOGO CONTAINER (PERFECT RATIO) */}
-    <div className="relative w-[260px] aspect-[460/800]">
-      <Image
-        src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1774034667/WhatsApp_Image_2026-03-20_at_22.34.47_exhi2v.jpg"
-        alt="General Council Logo"
-        fill
-        className="object-contain"
-        priority
-      />
-    </div>
-
-    {/* TEXT BELOW LOGO */}
-    {/* <h1 className="text-[#003f87] text-4xl font-bold mt-6 text-center">
-      Student Sports Council
-    </h1> */}
-
-    
-
-  </div>
-</div>
 
       {/* ASSOCIATE DEAN + SECRETARY */}
       <div className="max-w-6xl mx-auto mt-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-          {[associateDean, secretary].map((person, i) => (
+         {[associateDean].map((person, i) => (
+  <a
+    key={i}
+    href="https://iitjammu.ac.in/materials-engineering/faculty-list/~devilal"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block"
+  >
+    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+    <div className="relative z-10">
+      <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+        <Image
+          src={person.photo}
+          alt={person.name}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-110 object-top"
+        />
+      </div>
+      <p className="text-2xl font-bold text-[#003f87] group-hover:underline group-hover:text-[#003f87] transition">
+        {person.name}
+      </p>
+      <p className="text-gray-700">{person.post}</p>
+    </div>
+  </a>
+))}
+           {[secretary].map((person, i) => (
             <div
               key={i}
               className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
@@ -190,7 +193,7 @@ export default function Page() {
       {/* MODAL */}
       {selectedClub && (
         <div
-          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center px-4"
+          className="fixed inset-0 bg-black/60 z-[9999] flex items-center justify-center px-4"
           onClick={() => setSelectedClub(null)}
         >
           <div
@@ -216,13 +219,27 @@ export default function Page() {
               <div>
                 <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Person In-Charge</h3>
                 {clubPICs.map((p, i) => (
-                  <div key={i} className="flex items-center gap-4 bg-blue-50 p-4 rounded-xl mb-3">
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden">
-                      <Image src={p.photo} alt={p.name} fill className="object-cover" />
-                    </div>
-                    <p className="font-semibold">{p.name}</p>
-                  </div>
-                ))}
+                  <a
+  
+    key={i}
+    href={p.profile}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-4 bg-blue-50 hover:bg- p-4 rounded-xl mb-3 transition-all duration-200 hover:shadow-md cursor-pointer"
+  >
+    <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0">
+      <Image
+        src={p.photo}
+        alt={p.name}
+        fill
+        className="object-cover object-top transition-transform duration-300 group-hover:scale-110"
+      />
+    </div>
+    <p className="font-semibold text-[#000000] group-hover:underline group-hover:text-blue-[#003f87] transition">
+      {p.name}
+    </p>
+  </a>
+))}
 
                 <h3 className="text-2xl font-semibold text-[#003f87] mt-6 mb-4">Coordinators</h3>
                 {clubCoordinators.map((c, i) => (

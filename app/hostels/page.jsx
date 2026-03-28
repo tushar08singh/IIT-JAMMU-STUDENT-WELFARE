@@ -16,21 +16,28 @@ const hostels = [
       name: "Krishna Mohan Gupta",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709289/krishna_gmox4k.jpg",
-      phone: "+91 ",
+      
       email: "warden.fulgar@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mehul Gupta",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
+      
+      email: "hsec.boys@iitjammu.ac.in",
     },
     caretaker: {
       name: "Majid Bashir",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709377/majid_jvbkdo.jpg",
-      phone: "+91 ",
+      
       email: "caretaker.fulgar@iitjammu.ac.in",
     },
     extraCaretaker: {
       name: "Anish Koul",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709299/anish_jfjwap.jpg",
-      phone: "+91 ",
+      
       email: "caretaker.fulgar@iitjammu.ac.in",
     },
     wellnessWarden: {
@@ -38,6 +45,7 @@ const hostels = [
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709345/sumit_kikdod.jpg",
       phone: "+91 9709111227",
+      email:"sumit.ghosh@iitjammu.ac.in"
     },
   },
 
@@ -49,14 +57,21 @@ const hostels = [
       name: "Dr. Riya Bhowmik",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709311/warden_egret_kbovjx.jpg",
-      phone: "+91 9765432109",
-      email: "sunita.rao@iitjammu.ac.in",
+      
+      email: "warden.egret@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mishthi Agarwal",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg",
+      
+      email: "hsec.girls@iitjammu.ac.in",
     },
     caretaker: {
       name: "Ms. Pooja Devi",
       photo: "/hostels/egret-caretaker.jpg",
-      phone: "+91 9876540987",
-      email: "pooja.devi@iitjammu.ac.in",
+      
+      email: "caretaker.egret@iitjammu.ac.in",
     },
   },
 
@@ -68,20 +83,29 @@ const hostels = [
       name: "Dr. Ved Prakash Ranjan",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747072/Ved_Prakash_jiuzku.png",
-      phone: "+91-1912571236",
+      
       email: "warden.braeg@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mehul Gupta",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
+      
+      email: "hsec.boys@iitjammu.ac.in",
     },
     wellnessWarden: {
       name: "Mr. Sumit Raj Ghosh",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709345/sumit_kikdod.jpg",
       phone: "+91 9709111227",
+      email:"sumit.ghosh@iitjammu.ac.in"
     },
     caretaker: {
       name: "Mr. Md. Tabrej",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709242/tabrej_ezvlc2.png",
       phone: "+91 8875875803",
+      email: "caretaker.braeg@iitjammu.ac.in"
     },
     attendant: {
       name: "Mr. Ajay Kumar",
@@ -99,15 +123,22 @@ const hostels = [
       name: "Dr. Garima Singh",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709322/warden_dedhar_f7n6dg.jpg",
-      phone: "+91 9988776655",
-      email: "anil.singh@iitjammu.ac.in",
+      
+      email: "warden.dedhar@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mishthi Agarwal",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg",
+      
+      email: "hsec.girls@iitjammu.ac.in",
     },
     caretaker: {
       name: "Tasaduq Gul",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709332/caretaker_dedhar_nb0d5l.jpg",
-      phone: "+91 9090909090",
-      email: "ramesh.thakur@iitjammu.ac.in",
+      
+      email: "caretaker.dedhar@iitjammu.ac.in",
     },
   },
 
@@ -119,8 +150,15 @@ const hostels = [
       name: "Akash Awale",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709263/akash_a5ntu2.jpg",
-      phone: "+91 ",
+      
       email: "warden.canary@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mehul Gupta",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
+      
+      email: "hsec.boys@iitjammu.ac.in",
     },
     caretaker: {
       name: "Irfan Ahmad Teli",
@@ -151,9 +189,9 @@ export default function Page() {
 
         {/* ===== ADMIN BIG CARDS ===== */}
       {/* ===== ADMIN BIG CARDS (NEW STYLE) ===== */}
-<div className="max-w-6xl mx-auto mt-16 px-4">
+<div className="max-w-6xl mx-auto mt-16 px-4 mb-10">
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+  <div className="flex justify-center">  
 
     {/* AD HOSTEL */}
     <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
@@ -166,7 +204,7 @@ export default function Page() {
             src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1772463407/ad_hostel_lram8d.jpg"
             alt="Dr. Devi Lal"
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
+            className="object-cover transition-transform duration-300 group-hover:scale-110 object-top"
           />
         </div>
 
@@ -181,56 +219,10 @@ export default function Page() {
     </div>
 
 
-    {/* SECRETARY BOY */}
-    <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
-      
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
-
-      <div className="relative z-10">
-        <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
-          <Image
-            src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg"
-            alt="Secretary Boy"
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
-          />
-        </div>
-
-        <h2 className="text-2xl font-bold text-[#003f87]">
-          Mehul Gupta
-        </h2>
-
-        <p className="text-gray-700">
-          Hostel Secretary (Boy)
-        </p>
-      </div>
-    </div>
+   
 
 
-    {/* SECRETARY GIRL */}
-    <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
-      
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
-
-      <div className="relative z-10">
-        <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
-          <Image
-            src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg"
-            alt="Secretary Girl"
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
-          />
-        </div>
-
-        <h2 className="text-2xl font-bold text-[#003f87]">
-          Mishthi Agarwal
-        </h2>
-
-        <p className="text-gray-700">
-          Hostel Secretary (Girl)
-        </p>
-      </div>
-    </div>
+  
 
   </div>
 </div>
@@ -251,6 +243,7 @@ export default function Page() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { role: "Warden", data: hostel.warden },
+                  {role: "Secretary", data: hostel.secretary},
                   { role: "Wellness Warden", data: hostel.wellnessWarden },
                   { role: "Caretaker", data: hostel.caretaker },
                   { role: "Hostel Attendant", data: hostel.attendant },

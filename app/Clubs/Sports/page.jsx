@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useState,useEffect,useRef } from 'react'
 import Image from 'next/image'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { FaInstagram } from 'react-icons/fa'
+
 
 const clubs = [
   { name: 'Athletics Club', image: '/athletics.png', link: 'https://www.instagram.com/athletics.iitjammu/?hl=en' },
@@ -20,23 +21,22 @@ const clubs = [
 ]
 
 const coordinators = [
-  { name: 'Aarav Mehta', photo: '/athletics coordinator.jpg', club: 'Athletics Club' },
-  { name: 'Priya Sharma', photo: '/badminton coordinator boys.jpg', club: 'Badminton Club' },
- //{ name: 'Priya Sharma', photo: '/badminton coordinator girls.jpg', club: 'Badminton Club' },
-  { name: 'Kavya Nair', photo: '/basketball coordinator boys.jpg', club: 'Basketball Club' },
-  //{ name: 'Kavya Nair', photo: '/basketball coordinator girls.jpg', club: 'Basketball Club' },
-  { name: 'Rohan Gupta', photo: '/cricket coordinator.jpg', club: 'Cricket Club' },
-  { name: 'Sanya Kapoor', photo: '/chess coordinator boys.jpg', club: 'Chess Club' },
-  //{ name: 'Sanya Kapoor', photo: '/chess coordinator girls.jpg', club: 'Chess Club' },
-  { name: 'Ishaan Verma', photo: '/football coordinator.jpg', club: 'Football Club' },
-  { name: 'Mehul Jain', photo: '/e-sports coordinator.jpg', club: 'E-Sports Club' },
-  { name: 'Tanya Singh', photo: '/tt coordinator.jpg', club: 'Table Tennis Club' },
-  { name: 'Karan Mehra', photo: '/volleyball coordinator boys.jpg', club: 'Volleyball Club' },
-  { name: 'Karan Mehra', photo: '/volleyball coordinator girls.jpg', club: 'Volleyball Club' },
-  { name: 'Divya Rao', photo: '/weightlifting coordinator.jpg', club: 'Weightlifting Club' },
-  { name: 'Vivek Singh', photo: '/indoor coordinator.jpg', club: 'Indoor Sports Club' }
+  { name: 'Sumit', photo: '/athletics coordinator.jpg', club: 'Athletics Club' },
+  { name: 'Shivam Yadav ', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774692880/47fee13c-b587-4a55-b175-a8625d2becb2_ppgipo.jpg', club: 'Badminton Club' },
+  { name: ' Sneha Hansrajani ', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774692882/photo_2_tfxrdg.jpg', club: 'Badminton Club' },
+  { name: 'Rattanveer Singh', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774552413/IMG_4317_zz9oiv.heic', club: 'Basketball Club' },
+  { name: 'Anushka ', photo: '/basketball coordinator girls.jpg', club: 'Basketball Club' },
+  { name: 'Aditya Kumar ', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774552412/Screenshot_20250902-214947_-_Aditya_pamnfg.jpg', club: 'Cricket Club' },
+  { name: 'Harshit', photo: '/chess coordinator boys.jpg', club: 'Chess Club' },
+  { name: 'Priyanshi', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774552417/1000075795_fkyhzu.jpg', club: 'Chess Club' },
+  { name: 'Hemant Raina ', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774552414/1762711246066_ncm2t0.png', club: 'Football Club' },
+  { name: 'Ritik Singh ', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774552412/2cfc5302-14df-4534-aa76-838c2ac938a3_h5e1dl.jpg', club: 'E-Sports Club' },
+  { name: 'Shreysa', photo: '/tt coordinator.jpg', club: 'Table Tennis Club' },
+  { name: 'Ashutosh Kunzru ', photo: '/volleyball coordinator boys.jpg', club: 'Volleyball Club' },
+  { name: 'Garima Choudhary ', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774552788/IMG-20241013-WA0008_vg2pgu.jpg', club: 'Volleyball Club' },
+  { name: 'Kishan Arya ', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774552411/IMG-20260223-WA0005_chycak.jpg', club: 'Weightlifting Club' },
+  { name: 'Divyansh Choudhary ', photo: 'https://res.cloudinary.com/dabviijid/image/upload/v1774552414/IMG_20260324_153102_pz3yet.jpg', club: 'Indoor Sports Club' }
 ]
-
 /* ---------------- VISION & MISSION ---------------- */
 
 const clubVisionMission = {
@@ -158,6 +158,39 @@ const secretary = {
 }
 
 const Page = () => {
+  
+
+// inside Page component, add alongside existing useState:
+const heroImages = [
+  "https://res.cloudinary.com/dabviijid/image/upload/v1774292353/DSC04261_akopkh.jpg",
+  "https://res.cloudinary.com/dabviijid/image/upload/v1774292352/DSC09239_c5iaqq.jpg",
+  "https://res.cloudinary.com/dabviijid/image/upload/v1774292349/DSC_0257_je3tc8.jpg",
+  "https://res.cloudinary.com/dabviijid/image/upload/v1774292352/DSC03566_vkp7j0.jpg",
+  "https://res.cloudinary.com/dabviijid/image/upload/v1774292698/DSC09658_1_bobjt1.jpg"
+]
+
+const [currentSlide, setCurrentSlide] = useState(0)
+const intervalRef = useRef(null)
+const hasUserInteracted = useRef(false)
+
+useEffect(() => {
+  intervalRef.current = setInterval(() => {
+    if (!hasUserInteracted.current) {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+    }
+  }, 4000)
+  return () => { if (intervalRef.current) clearInterval(intervalRef.current) }
+}, [heroImages.length])
+
+const stopAutoplay = () => {
+  if (!hasUserInteracted.current) {
+    hasUserInteracted.current = true
+    if (intervalRef.current) clearInterval(intervalRef.current)
+  }
+}
+const nextSlide = () => { stopAutoplay(); setCurrentSlide((prev) => (prev + 1) % heroImages.length) }
+const prevSlide = () => { stopAutoplay(); setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length) }
+const goToSlide = (index) => { stopAutoplay(); setCurrentSlide(index) }
   const [selectedClub, setSelectedClub] = useState(null)
 
   const clubCoordinators = coordinators.filter(c => c.club === selectedClub?.name)
@@ -167,130 +200,199 @@ const Page = () => {
     <>
       <Header />
 
-      {/* Hero */}
-     {/* LOGO CARD */}
-<div className="max-w-6xl mx-auto mt-10 px-4">
-  <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center justify-center">
+     {/* SLIDESHOW — replaces logo card */}
+<div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] overflow-hidden">
+  {heroImages.map((src, index) => (
+    <Image
+      key={index}
+      src={src}
+      alt="Sports Council"
+      fill
+      priority={index === 0}
+      className={`object-cover transition-opacity duration-1000 ${
+        index === currentSlide ? "opacity-100" : "opacity-0"
+      }`}
+    />
+  ))}
 
-    {/* LOGO CONTAINER (PERFECT RATIO) */}
-    <div className="relative w-[260px] aspect-[460/800]">
-      <Image
-        src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1774033659/Untitled_460_x_800_px_xklc46.png"
-        alt="Sports Council Logo"
-        fill
-        className="object-contain"
-        priority
+  <div className="absolute inset-0 bg-black/40 z-[1]" />
+
+  {/* Left Arrow */}
+  <button
+    onClick={prevSlide}
+    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-xs text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition"
+  >
+    ❮
+  </button>
+
+  {/* Right Arrow */}
+  <button
+    onClick={nextSlide}
+    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-xs text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition"
+  >
+    ❯
+  </button>
+
+  {/* Dots */}
+  <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+    {heroImages.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => goToSlide(index)}
+        className={`w-3 h-3 rounded-full transition ${
+          index === currentSlide ? "bg-white scale-110" : "bg-white/50 hover:bg-white/80"
+        }`}
       />
-    </div>
-
-    {/* TEXT BELOW LOGO */}
-    {/* <h1 className="text-[#003f87] text-4xl font-bold text-center">
-      IIT Jammu
-    </h1> */}
-
-   
-
+    ))}
   </div>
 </div>
 
       {/* Secretary */}
       {/* ASSOCIATE DEAN + SPORTS SECRETARY */}
-<div className="max-w-6xl mx-auto mt-16 px-4">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-    {/* Associate Dean Card */}
-    <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
       
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+      <div className="max-w-6xl mx-auto px-4 mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-      <div className="relative z-10">
-        <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
-          <Image
-            src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1768641537/WhatsApp_Image_2026-01-17_at_14.12.59_ap6x4e.jpg"
-            alt="Dr. Devi Lal"
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
-          />
-        </div>
-        <h2 className="text-2xl font-bold text-[#003f87]">
-          Dr. Devi Lal
-        </h2>
-        <p className="text-gray-700">
-          Associate Dean (Student Affairs)
-        </p>
-      </div>
+          {/* Associate Dean Card */}
+          <a
+          href="https://iitjammu.ac.in/mechanical_engineering/faculty.html?faculty=~shivas"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block"
+>
+  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+
+  <div className="relative z-10">
+    <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+      <Image
+        src="https://res.cloudinary.com/dabviijid/image/upload/v1774292852/Shiva_S_0_nihh5d.jpg"
+        alt="Dr. Shiva S"
+        fill
+        className="object-cover transition-transform duration-300 group-hover:scale-110 object-top"
+      />
     </div>
-
-    {/* Sports Secretary Card */}
-    <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
-      
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
-
-      <div className="relative z-10">
-        <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
-          <Image
-            src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941898/sports_secretary_iqeyth.png"
-            alt="Sandeep Moond"
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
-          />
-        </div>
-        <h2 className="text-2xl font-bold text-[#003f87]">
-          Sandeep Moond
-        </h2>
-        <p className="text-gray-700">
-          Sports Secretary
-        </p>
-      </div>
-    </div>
-
+    <p className="text-2xl font-bold text-[#003f87] group-hover:underline transition">
+      Dr. Shiva S
+    </p>
+    <p className="text-gray-700">Associate Dean (Sports)</p>
   </div>
-</div>
+</a>
+
+          {/* Sports Secretary Card */}
+          <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+
+            <div className="relative z-10">
+              <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+                <Image
+                  src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941898/sports_secretary_iqeyth.png"
+                  alt="Sandeep Moond"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h2 className="text-2xl font-bold text-[#003f87]">
+                Sandeep Moond
+              </h2>
+              <p className="text-gray-700">
+                Sports Secretary
+              </p>
+            </div>
+            
+          </div>
+          <a
+           href="https://iitjammu.irins.org/profile/616088"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block"
+>
+  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+  <div className="relative z-10">
+    <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+      <Image
+        src="https://res.cloudinary.com/dabviijid/image/upload/v1774293592/616088_eb4zqd.jpg"
+        alt="Dr. Abhishek Kumar"
+        fill
+        className="object-cover transition-transform duration-300 group-hover:scale-110"
+      />
+    </div>
+    <p className="text-2xl font-bold text-[#003f87] group-hover:underline transition">
+      Dr. Abhishek Kumar
+    </p>
+    <p className="text-gray-700">FIC (Intra-Sports)</p>
+  </div>
+</a>
+<a
+          href="https://www.iitjammu.ac.in/faculty/~deepakyadav"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block"
+>
+  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+  <div className="relative z-10">
+    <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+      <Image
+        src="https://res.cloudinary.com/dabviijid/image/upload/v1774292962/deepak_yadav_kpxkw9.jpg"
+        alt="Dr. Deepak Yadav"
+        fill
+        className="object-cover transition-transform duration-300 group-hover:scale-110 object-top"
+      />
+    </div>
+    <p className="text-2xl font-bold text-[#003f87] group-hover:underline transition">
+      Dr. Deepak Yadav
+    </p>
+    <p className="text-gray-700">FIC (Inter-Sports)</p>
+  </div>
+</a>
+          
+
+        </div>
+      </div>
       {/* Clubs */}
       <section className="bg-blue-50 mt-20 py-16">
-                   <h2 className="text-center text-4xl font-bold text-[#003f87] mb-12">
-                     Our Clubs
-                   </h2>
-           
-                   <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-                     {clubs.map((club, i) => (
-                       <div key={i} className="bg-white rounded-xl shadow hover:shadow-xl transition">
-                         <div
-                           className="group relative w-full aspect-[4/3] sm:h-64 cursor-pointer overflow-hidden"
-                           onClick={() => setSelectedClub(club)}
-                         >
-                           <Image
-                             src={club.image}
-                             alt={club.name}
-                             fill
-                             className="object-contain sm:object-cover transition-transform duration-300 group-hover:scale-110"
-                           />
-                           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300" />
-                         </div>
-           
-                         <div className="p-6 flex flex-col">
-                           <h3 className="text-xl font-bold text-[#003f87] mb-4">
-                             {club.name}
-                           </h3>
-                           <a
-                             href={club.link}
-                             target="_blank"
-                             rel="noopener noreferrer"
-                             className="mt-auto inline-flex items-center justify-center gap-2 text-white bg-[#003f87] hover:bg-[#06376e] px-4 py-2 rounded-lg font-semibold transition"
-                           >
-                             <FaInstagram size={20} /> See More
-                           </a>
-                         </div>
-                       </div>
-                     ))}
-                   </div>
-                 </section>
-      
+        <h2 className="text-center text-4xl font-bold text-[#003f87] mb-12">
+          Our Clubs
+        </h2>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+          {clubs.map((club, i) => (
+            <div key={i} className="bg-white rounded-xl shadow hover:shadow-xl transition">
+              <div
+                className="group relative w-full aspect-[4/3] sm:h-64 cursor-pointer overflow-hidden bg-white"  
+                onClick={() => setSelectedClub(club)}
+              >
+                <Image
+                  src={club.image}
+                  alt={club.name}
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300" />
+              </div>
+
+              <div className="p-6 flex flex-col">
+                <h3 className="text-xl font-bold text-[#003f87] mb-4">
+                  {club.name}
+                </h3>
+                <a
+                  href={club.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center justify-center gap-2 text-white bg-[#003f87] hover:bg-[#06376e] px-4 py-2 rounded-lg font-semibold transition"
+                >
+                  <FaInstagram size={20} /> See More
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Modal */}
       {selectedClub && (
-        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4" onClick={() => setSelectedClub(null)}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 flex items-center justify-center px-4" onClick={() => setSelectedClub(null)}>
           <div className="bg-white rounded-2xl max-w-5xl w-full overflow-hidden" onClick={e => e.stopPropagation()}>
             <div className="relative h-48">
               <Image src={selectedClub.image} alt={selectedClub.name} fill className="object-cover" />
