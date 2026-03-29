@@ -18,8 +18,8 @@ const clubs = [
 
 const coordinators = [
   { name: "Soham Kakkar", photo: "/coding coordinator.jpg", club: "Coding Club" },
-  { name: "Third Year", photo: "/sae coordinator.png", club: "SAE Club" },
-  { name: "Rudransh Joshi", photo: "/sae co-coordinator.jpg", club: "SAE Club", role: "Co-Coordinator" },
+  //{ name: "Third Year", photo: "/sae coordinator.png", club: "SAE Club" },
+  { name: "Rudransh Joshi", photo: "/sae co-coordinator.jpg", club: "SAE Club", role: "Coordinator" },
   { name: "Hriday Rana", photo: "/robotics coordinator.jpg", club: "Robo-sapiens Club" },
   { name: "Vaibhav Mittal", photo: "/astriaza coordinator.jpg", club: "Astriaza Club" },
   { name: "Khushi", photo: "/fintech coordinator.png", club: "FinTech Club" }
