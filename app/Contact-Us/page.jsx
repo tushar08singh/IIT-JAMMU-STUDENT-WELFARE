@@ -50,7 +50,32 @@ export default function ContactUsTeam() {
         </div>
 
         {/* ================= SOCIAL MEDIA ================= */}
-        <div className="max-w-xl mx-auto bg-white rounded-xl shadow-md p-8 text-center">
+        
+
+        {/* ================= GOOGLE MAP ================= */}
+        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden mb-8">
+          <div className="p-6 text-center border-b border-gray-100">
+            <h2 className="text-2xl font-bold text-[#0b3c7d]">
+              Find Us on the Map
+            </h2>
+            <p className="text-sm text-gray-500 mt-1">
+              IIT Jammu, Jagti Campus, Jammu – 181221, J&K, India
+            </p>
+          </div>
+          <div className="w-full h-[450px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26830.421344757226!2d74.8847104!3d32.7974912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e814038301e31%3A0xe3a42e213df5c738!2sIndian%20Institute%20of%20Technology%2C%20Jammu!5e0!3m2!1sen!2sin!4v1774695269931!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="IIT Jammu Location"
+            />
+          </div>
+        </div>
+        <div className="max-w-xl mx-auto bg-white rounded-xl shadow-md p-8 text-center mb-16">
           <h2 className="text-2xl font-bold text-[#0b3c7d] mb-6">
             Connect with IIT Jammu
           </h2>
@@ -87,6 +112,7 @@ export default function ContactUsTeam() {
             </a>
           </div>
         </div>
+
       </main>
 
       <Footer />

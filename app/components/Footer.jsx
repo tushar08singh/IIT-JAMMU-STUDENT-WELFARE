@@ -26,7 +26,7 @@ const Footer = () => {
 
           {/* Copyright Information */}
           <p className="text-sm pt-4">
-            Copyright &copy; 2020 IIT Jammu, all rights reserved.
+            Copyright &copy; 2026 IIT Jammu, all rights reserved.
           </p>
         </div>
 

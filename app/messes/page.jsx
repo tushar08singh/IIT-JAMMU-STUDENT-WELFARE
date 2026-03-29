@@ -4,69 +4,47 @@ import React from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { FaPhoneAlt } from "react-icons/fa";
 
 /* ================= DATA ================= */
 
 const messes = [
-
   {
     name: "Annapurna Mess (2nd Floor)",
     location: "Fulgar – 1C",
     capacity: "450+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091913/IMG_4608_crp7dc.jpg",
-    timings: {
-      breakfast: "7:30 AM – 9:30 AM",
-      lunch: "12:30 PM – 2:30 PM",
-      dinner: "7:30 PM – 9:30 PM",
-    },
+    image: "https://res.cloudinary.com/dabviijid/image/upload/v1774694949/DSCF3139.JPG_dhofqc.jpg",
   },
   {
     name: "Annapurna Mess (3rd Floor)",
     location: "Fulgar – 1C",
     capacity: "450+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091913/IMG_4608_crp7dc.jpg",
-    timings: {
-      breakfast: "7:30 AM – 9:30 AM",
-      lunch: "12:30 PM – 2:30 PM",
-      dinner: "7:30 PM – 9:30 PM",
-    },
+    image: "https://res.cloudinary.com/dabviijid/image/upload/v1774694949/DSCF3147.JPG_gb4kfv.jpg",
   },
-   {
+  {
     name: "Egret Mess",
     location: "1B",
     capacity: "300+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081450/WhatsApp_Image_2026-03-21_at_12.53.35_ihcqzm.jpg",
-    timings: {
-      breakfast: "7:30 AM – 9:30 AM",
-      lunch: "12:30 PM – 2:30 PM",
-      dinner: "7:30 PM – 9:30 PM",
-    },
+    image: "https://res.cloudinary.com/dabviijid/image/upload/v1774694949/DSCF3178.JPG_jhfjly.jpg",
   },
   {
     name: "Canary Mess",
     location: "L-112",
     capacity: "400+ students",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081543/WhatsApp_Image_2026-03-21_at_12.53.37_m1lmqn.jpg",
-    timings: {
-      breakfast: "7:30 AM – 9:30 AM",
-      lunch: "12:30 PM – 2:30 PM",
-      dinner: "7:30 PM – 9:30 PM",
-    },
   },
   {
     name: "Dedhar Mess",
     location: "L-120",
     capacity: "350+ students",
-    image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081499/WhatsApp_Image_2026-03-21_at_12.53.41_z36ha2.jpg",
-    timings: {
-      breakfast: "7:30 AM – 9:30 AM",
-      lunch: "12:30 PM – 2:30 PM",
-      dinner: "7:30 PM – 9:30 PM",
-    },
+    image: "https://res.cloudinary.com/dabviijid/image/upload/v1774694949/DSCF3167.JPG_phxc3y.jpg",
   },
- 
-  
+];
+
+const commonTimings = [
+  { icon: "", label: "Breakfast", time: "7:20 AM – 9:20 AM" },
+  { icon: "", label: "Lunch",     time: "12:20 PM – 2:20 PM" },
+  { icon: "", label: "Evening Snacks",     time: "5:30 PM – 6:30 PM" },
+  { icon: "", label: "Dinner",    time: "7:30 PM – 9:30 PM" },
 ];
 
 const committee = [
@@ -94,9 +72,9 @@ const Card = ({ title, name, img }) => (
     <div className="relative w-full aspect-[3/4] bg-gray-100">
       <Image src={img} alt={name} fill className="object-contain p-2" />
     </div>
-    <div className="p-5">
-      <h3 className="text-lg font-bold text-[#003f87]">{title}</h3>
-      <p className="text-gray-700 font-semibold mt-1">{name}</p>
+    <div className="p-4">
+      <h3 className="text-sm font-bold text-[#003f87]">{title}</h3>
+      <p className="text-gray-700 text-sm">{name}</p>
     </div>
   </div>
 );
@@ -108,66 +86,49 @@ export default function Page() {
     <>
       <Header />
 
-      {/* LOGO CARD */}
-      <div className="max-w-6xl mx-auto mt-10 px-4">
-        <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center">
-          <div className="relative w-[260px] aspect-[460/800]">
-            <Image
-              src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1774080565/WhatsApp_Image_2026-03-21_at_03.16.56_db9we9.jpg"
-              alt="Mess Logo"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <h1 className="text-[#003f87] text-4xl font-bold mt-4">
-            IIT Jammu
-          </h1>
-        </div>
-      </div>
-
-      {/* MESS SECTION */}
       <section className="bg-blue-50 py-16 mt-10">
+        <h1 className="text-center text-4xl font-bold text-[#003f87] mb-6">
+          Our Messes
+        </h1>
+
+        {/* ── Common Timings Banner ── */}
+        <div className="max-w-2xl mx-auto mb-12 px-6">
+          <div className="bg-white rounded-2xl shadow-md px-8 py-6">
+            <h2 className="text-center text-lg font-bold text-[#003f87] mb-4 tracking-wide uppercase">
+              🕐 Mess Timings (All Messes)
+            </h2>
+            <div className="flex flex-col sm:flex-row justify-center gap-5 text-gray-700 text-sm sm:text-base">
+              {commonTimings.map(({ icon, label, time }) => (
+                <div key={label} className="flex flex-col items-center gap-2">
+                  <span className="text-2xl">{icon}</span>
+                  <span className="font-bold text-[#003f87]">{label}</span>
+                  <span>{time}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ── Individual Mess Cards ── */}
         <div className="max-w-6xl mx-auto space-y-10 px-6">
           {messes.map((mess, i) => (
             <div key={i} className="bg-white rounded-2xl shadow-md p-6 text-center">
+              <h3 className="text-2xl font-bold text-[#003f87] mb-4">{mess.name}</h3>
 
-              {/* BIG CENTERED IMAGE */}
               <div className="relative w-full max-w-[500px] mx-auto aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden">
-                <Image
-                  src={mess.image}
-                  alt={mess.name}
-                  fill
-                  className="object-cover"
-                />
+                <Image src={mess.image} alt={mess.name} fill className="object-cover" />
               </div>
 
-              {/* CONTENT BELOW */}
-              <div className="mt-6 space-y-2">
-                <h3 className="text-2xl font-bold text-[#003f87]">
-                  {mess.name}
-                </h3>
-
-                <p>📍 {mess.location}</p>
-                <p>👥 {mess.capacity}</p>
-
-                <div className="flex justify-center items-center gap-2">
-                  <FaPhoneAlt />
-                  <span>Not Available</span>
-                </div>
-
-                <div className="mt-3 text-gray-600">
-                  <p>🍳 {mess.timings.breakfast}</p>
-                  <p>🍛 {mess.timings.lunch}</p>
-                  <p>🌙 {mess.timings.dinner}</p>
-                </div>
+              <div className="mt-6 space-y-2 text-gray-700">
+                <p>📍 Location — {mess.location}</p>
+                <p>👥 Capacity — {mess.capacity}</p>
               </div>
-
             </div>
           ))}
         </div>
       </section>
 
-      {/* COMMITTEE */}
+      {/* FULL COMMITTEE */}
       <section className="bg-white py-20">
         <h2 className="text-center text-4xl font-bold text-[#003f87] mb-12">
           Mess Administration & Committee
