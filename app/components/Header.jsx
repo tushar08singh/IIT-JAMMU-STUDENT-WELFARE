@@ -39,7 +39,7 @@ const Header = () => {
     { label: "Sports Council",   href: "/Clubs/Sports" },
     { label: "Hostels",          href: "/hostels" },
     { label: "Messes",           href: "/messes" },
-    { label: "Flagship Events",  href: "/Flagship-Events" },
+    { label: "Flagship Events",  href: "/Flagship-events" },
     { label: "Announcements",    href: "/announcements" },
     { label: "Team",             href: "/Team" },
     { label: "Contact Us",       href: "/Contact-Us" },

@@ -11,6 +11,9 @@ const Page = () => {
     "/hero1.jpg",
     "/hero2.jpg",
     "/hero3.jpg",
+    "/hero7.jpg",
+    "/hero5.jpg",
+    "/hero6.jpg",
     
   ];
 
@@ -371,7 +374,7 @@ const Page = () => {
                   
                   <div className="mt-8 pt-4 border-t border-gray-100">
                     <p className="font-semibold text-[#003f87]">With warm regards,</p>
-                    <p className="font-bold text-lg text-[#003f87]">Prof. [Dean&apos;s Name]</p>
+                    <p className="font-bold text-lg text-[#003f87]">Dr.Anup Shukla</p>
                     <p className="text-gray-500 text-sm">Dean, Student Affairs</p>
                     <p className="text-gray-500 text-sm">Indian Institute of Technology Jammu</p>
                   </div>
@@ -382,13 +385,13 @@ const Page = () => {
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                       </svg>
-                      dean.sa@iitjammu.ac.in
+                      anup.shukla@iitjammu.ac.in
                     </span>
                     <span className="flex items-center gap-1">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                       </svg>
-                      Office: Room 123, Academic Block
+                      Office: Room No. 01AC-6-22, North Block, Indian Institute of Technology Jammu
                     </span>
                   </div>
                 </div>
