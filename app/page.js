@@ -13,7 +13,7 @@ const Page = () => {
     "/hero3.jpg",
     "/hero7.jpg",
     "/hero5.jpg",
-    "/hero6.jpg",
+    //"/hero6.jpg",
     
   ];
 
