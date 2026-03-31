@@ -119,8 +119,13 @@ const secretary = {
 export default function Page() {
   const heroImages = [
     "https://res.cloudinary.com/dabviijid/image/upload/v1774553604/DSC00957_yfhuun.jpg",
+    "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774950087/DSC00186_lfwxza.jpg",
+    "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774950085/54d4710e-38fa-4c90-a29b-087069eb9a6c_bnaxik.jpg",
+    "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774950081/IMG-20250621-WA0015_d61mjk.jpg",
     "/hero3.jpg",
-    "https://res.cloudinary.com/dabviijid/image/upload/v1774553604/DSC06554_vg0n3f.jpg"
+    "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774950090/DSC02870_2_zkzejw.jpg",
+    "https://res.cloudinary.com/dabviijid/image/upload/v1774553604/DSC06554_vg0n3f.jpg",
+    "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774952029/DSC06144_lcsvbj.jpg"
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);

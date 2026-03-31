@@ -277,6 +277,74 @@ const goToSlide = (index) => { stopAutoplay(); setCurrentSlide(index) }
     <p className="text-gray-700">Associate Dean (Sports)</p>
   </div>
 </a>
+<a
+          href="https://www.iitjammu.ac.in/faculty/~deepakyadav"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block"
+>
+  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+  <div className="relative z-10">
+    <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+      <Image
+        src="https://res.cloudinary.com/dabviijid/image/upload/v1774292962/deepak_yadav_kpxkw9.jpg"
+        alt="Dr. Deepak Yadav"
+        fill
+        className="object-cover transition-transform duration-300 group-hover:scale-110 object-top"
+      />
+    </div>
+    <p className="text-2xl font-bold text-[#003f87] group-hover:underline transition">
+      Dr. Deepak Yadav
+    </p>
+    <p className="text-gray-700">FIC (Inter-Sports)</p>
+  </div>
+</a>
+        <a
+           href="https://iitjammu.irins.org/profile/616088"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block"
+>
+  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+  <div className="relative z-10">
+    <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+      <Image
+        src="https://res.cloudinary.com/dabviijid/image/upload/v1774293592/616088_eb4zqd.jpg"
+        alt="Dr. Abhishek Kumar"
+        fill
+        className="object-cover transition-transform duration-300 group-hover:scale-110"
+      />
+    </div>
+    <p className="text-2xl font-bold text-[#003f87] group-hover:underline transition">
+      Dr. Abhishek Kumar
+    </p>
+    <p className="text-gray-700">FIC (Intra-Sports)</p>
+  </div>
+</a>
+
+<div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
+
+            <div className="relative z-10">
+              <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
+                <Image
+                  src="https://res.cloudinary.com/dabviijid/image/upload/v1774903860/WhatsApp_Image_2026-03-30_at_4.51.16_PM_ru4sqr.jpg"
+                  alt="Sandeep Moond"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110 object-top"
+                />
+              </div>
+              <h2 className="text-2xl font-bold text-[#003f87]">
+                Mr. Raj Srivastava
+              </h2>
+              <p className="text-gray-700">
+              Assistant Sports Officer
+              </p>
+            </div>
+            
+          </div>
 
           {/* Sports Secretary Card */}
           <div className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer">
@@ -302,50 +370,8 @@ const goToSlide = (index) => { stopAutoplay(); setCurrentSlide(index) }
             </div>
             
           </div>
-          <a
-           href="https://iitjammu.irins.org/profile/616088"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block"
->
-  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
-  <div className="relative z-10">
-    <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
-      <Image
-        src="https://res.cloudinary.com/dabviijid/image/upload/v1774293592/616088_eb4zqd.jpg"
-        alt="Dr. Abhishek Kumar"
-        fill
-        className="object-cover transition-transform duration-300 group-hover:scale-110"
-      />
-    </div>
-    <p className="text-2xl font-bold text-[#003f87] group-hover:underline transition">
-      Dr. Abhishek Kumar
-    </p>
-    <p className="text-gray-700">FIC (Intra-Sports)</p>
-  </div>
-</a>
-<a
-          href="https://www.iitjammu.ac.in/faculty/~deepakyadav"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="relative group bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer block"
->
-  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 rounded-xl"></div>
-  <div className="relative z-10">
-    <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden mb-4">
-      <Image
-        src="https://res.cloudinary.com/dabviijid/image/upload/v1774292962/deepak_yadav_kpxkw9.jpg"
-        alt="Dr. Deepak Yadav"
-        fill
-        className="object-cover transition-transform duration-300 group-hover:scale-110 object-top"
-      />
-    </div>
-    <p className="text-2xl font-bold text-[#003f87] group-hover:underline transition">
-      Dr. Deepak Yadav
-    </p>
-    <p className="text-gray-700">FIC (Inter-Sports)</p>
-  </div>
-</a>
+  
+
           
 
         </div>

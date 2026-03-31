@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useRef,useEffect } from "react";
 import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -76,6 +76,56 @@ const secretary = {
 };
 
 export default function Page() {
+  const heroImages = [
+      "/hero9.jpg",
+      "/hero10.jpg",
+      "/hero11.jpg",
+      "/hero14.jpg",
+      "/hero12.jpg",
+      "/hero13.jpg",
+      //"/hero6.jpg",
+      
+    ];
+  
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const intervalRef = useRef(null);
+    const hasUserInteracted = useRef(false);
+  
+    useEffect(() => {
+      intervalRef.current = setInterval(() => {
+        if (!hasUserInteracted.current) {
+          setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+        }
+      }, 4000);
+  
+      return () => {
+        if (intervalRef.current) clearInterval(intervalRef.current);
+      };
+    }, [heroImages.length]);
+  
+    const stopAutoplay = () => {
+      if (!hasUserInteracted.current) {
+        hasUserInteracted.current = true;
+        if (intervalRef.current) clearInterval(intervalRef.current);
+      }
+    };
+  
+    const nextSlide = () => {
+      stopAutoplay();
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    };
+  
+    const prevSlide = () => {
+      stopAutoplay();
+      setCurrentSlide(
+        (prev) => (prev - 1 + heroImages.length) % heroImages.length
+      );
+    };
+  
+    const goToSlide = (index) => {
+      stopAutoplay();
+      setCurrentSlide(index);
+    };
   const [selectedClub, setSelectedClub] = useState(null);
 
   const clubPICs = PICs.filter(p => p.club === selectedClub?.name);
@@ -85,6 +135,66 @@ export default function Page() {
   return (
     <>
       <Header />
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] overflow-hidden">
+                {heroImages.map((src, index) => (
+                  <Image
+                    key={index}
+                    src={src}
+                    alt="IIT Jammu Activities"
+                    fill
+                    priority={index === 0}
+                    className={`object-cover transition-opacity duration-1000 ${
+                      index === currentSlide ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+      
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-[1]" />
+      
+                {/* Hero Text */}
+                {/* <div className="absolute inset-0 z-[2] flex flex-col items-center justify-center text-center px-4">
+                  <div className="animate-fadeInUp">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+                      Student Affairs Council
+                    </h1>
+                    <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
+                      Empowering Students • Building Leaders • Creating Excellence
+                    </p>
+                  </div>
+                </div> */}
+      
+                {/* Left Arrow */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-xs text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition hover:scale-110"
+                >
+                  ❮
+                </button>
+      
+                {/* Right Arrow */}
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-xs text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition hover:scale-110"
+                >
+                  ❯
+                </button>
+      
+                {/* Dots */}
+                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                  {heroImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`w-3 h-3 rounded-full transition ${
+                        index === currentSlide
+                          ? "bg-white scale-110"
+                          : "bg-white/50 hover:bg-white/80"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
 
       {/* HERO */}
       {/* LOGO CARD */}

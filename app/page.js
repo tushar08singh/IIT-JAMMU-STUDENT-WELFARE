@@ -11,6 +11,7 @@ const Page = () => {
     "/hero1.jpg",
     "/hero2.jpg",
     "/hero3.jpg",
+    "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774952432/DSC02425_jafklj.jpg",
     "/hero7.jpg",
     "/hero5.jpg",
     //"/hero6.jpg",
@@ -123,6 +124,12 @@ const Page = () => {
             transform: translateX(0);
           }
         }
+        @keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+          
+          
         
         .animate-fadeInUp {
           animation: fadeInUp 0.8s ease-out;
@@ -154,7 +161,7 @@ const Page = () => {
 
       <main className="relative mt-1">
         {/* ================= HERO SLIDESHOW ================= */}
-        <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] overflow-hidden">
+        <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[65vh] overflow-hidden">
           {heroImages.map((src, index) => (
             <Image
               key={index}
@@ -214,6 +221,35 @@ const Page = () => {
             ))}
           </div>
         </div>
+        {/* ================= WELCOME MARQUEE ================= */}
+<div className="w-full overflow-hidden bg-[#003f87] border-t-[3px] border-b-[3px] border-[#FF6B00] h-12 flex items-center">
+  <div
+    className="flex items-center whitespace-nowrap"
+    style={{
+      animation: "marquee-scroll 22s linear infinite",
+    }}
+  >
+    {[0, 1].map((copy) => (
+      <span key={copy} className="inline-flex items-center">
+        <span className="inline-flex items-center gap-2 px-12 text-white text-sm font-medium tracking-widest uppercase">
+          <span className="inline-flex items-center bg-[#FF6B00] text-white text-xs px-3 py-0.5 rounded-sm mr-1">IIT JAMMU</span>
+          Welcome to Student Affairs Council, IIT Jammu
+          <span className="w-2 h-2 bg-[#FF6B00] rounded-full inline-block" />
+        </span>
+        <span className="inline-flex items-center gap-2 px-12 text-white text-sm font-medium tracking-widest uppercase">
+          <span className="w-2 h-2 bg-[#FF6B00] rounded-full inline-block" />
+          Empowering Students &bull; Building Leaders &bull; Creating Excellence
+          <span className="w-2 h-2 bg-[#FF6B00] rounded-full inline-block" />
+        </span>
+        <span className="inline-flex items-center gap-2 px-12 text-white text-sm font-medium tracking-widest uppercase">
+          <span className="w-2 h-2 bg-[#FF6B00] rounded-full inline-block" />
+          General &bull; Academic &bull; Cultural &bull;  Sports Councils
+          <span className="w-2 h-2 bg-[#FF6B00] rounded-full inline-block" />
+        </span>
+      </span>
+    ))}
+  </div>
+</div>
 
         {/* ================= VISION SECTION ================= */}
         <section className="px-4 sm:px-8 md:px-16 py-20 bg-gradient-to-br from-blue-50 to-white">
@@ -374,7 +410,15 @@ const Page = () => {
                   
                   <div className="mt-8 pt-4 border-t border-gray-100">
                     <p className="font-semibold text-[#003f87]">With warm regards,</p>
-                    <p className="font-bold text-lg text-[#003f87]">Dr.Anup Shukla</p>
+                    <a
+  href="https://iitjammu.ac.in/faculty/~anupshukla"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <p className="text-2xl font-bold text-[#003f87] hover:underline transition">
+    Dr. Anup Shukla
+  </p>
+</a>
                     <p className="text-gray-500 text-sm">Dean, Student Affairs</p>
                     <p className="text-gray-500 text-sm">Indian Institute of Technology Jammu</p>
                   </div>
@@ -385,13 +429,13 @@ const Page = () => {
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                       </svg>
-                      anup.shukla@iitjammu.ac.in
+                      dean.sw@iitjammu.ac.in
                     </span>
                     <span className="flex items-center gap-1">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                       </svg>
-                      Office: Room No. 01AC-6-22, North Block, Indian Institute of Technology Jammu
+                      Office: Room No. 5041, Pushkar Building, Indian Institute of Technology Jammu
                     </span>
                   </div>
                 </div>

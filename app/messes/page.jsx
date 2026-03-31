@@ -54,6 +54,8 @@ const committee = [
   { title: "Mess Warden - Dedhar", name: "Dr. Ved Prakash Ranjan", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747072/Ved_Prakash_jiuzku.png" },
   { title: "Mess Warden - Egret", name: "Dr. Riya Bhowmik", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709311/warden_egret_kbovjx.jpg" },
   { title: "Mess Manager", name: "Ms. Rehana Rasool", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747088/rehana_pic_tcrwf2.jpg" },
+  { title: "Dedhar,Canary Mess", name: "Irfan Ahmad Teli", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709277/irfan_plq41j.jpg" },
+  { title: "Annapurna Mess", name: "Gaurav Bhagat", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709366/gaurav_nmxuac.jpg" },
   { title: "Mess Secretary", name: "Ujjwal Gupta", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747073/Ujjwal_Gupta_Mess_secretary_mpxpzz.jpg" },
   { title: "Mess Committee Member", name: "Devansh Agrawal", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747101/DevanshAgrawal_2023ume0254_Fulgar2ndFloor_mp3qa5.jpg" },
   { title: "Mess Committee Member", name: "Gayatri", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747095/Gayatri_2025PMD0057_lrsn3l.jpg" },

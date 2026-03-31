@@ -15,7 +15,7 @@ export default function TeamPage() {
         </h1>
 
         {/* ================= DEAN ================= */}
-        <section className="max-w-7xl mx-auto mb-24 text-center">
+         <section className="max-w-7xl mx-auto mb-24 text-center">
           <h2 className="text-3xl font-extrabold text-[#0b3c7d] mb-10">
             Dean Student Affairs
           </h2>
@@ -43,7 +43,7 @@ export default function TeamPage() {
         </section>
 
         {/* ================= ASSOCIATE DEANS ================= */}
-        <section className="max-w-7xl mx-auto mb-24">
+         <section className="max-w-7xl mx-auto mb-24">
           <h2 className="text-3xl font-extrabold text-center text-[#0b3c7d] mb-12">
             Associate Deans
           </h2>
@@ -68,40 +68,6 @@ export default function TeamPage() {
                 </div>
               </a>
             ))}
-          </div>
-        </section>
-
-        {/* ================= AR & OIC ================= */}
-        <section className="max-w-7xl mx-auto mb-24">
-          <h2 className="text-3xl font-extrabold text-center text-[#0b3c7d] mb-12">
-            Student Affairs Administration
-          </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-3xl mx-auto">
-            {/* AR - no profile link, non-clickable card with hover style only */}
-            <div className="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]">
-              <div className="relative w-full aspect-[4/5]">
-                <Image src="/assistant registrar final.png" alt="Dr. R. P. Prajapat" fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              <div className="p-5 text-center">
-                <h3 className="font-semibold text-[#0b3c7d]">Assistant Registrar (Student Activities)</h3>
-                <p className="text-2xl font-bold text-[#003f87] transition">Dr. R P Prajapat</p>
-              </div>
-            </div>
-
-            {/* OIC - no profile link */}
-            <div className="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]">
-              <div className="relative w-full aspect-[4/5]">
-                <Image src="https://res.cloudinary.com/dveqd1vm1/image/upload/v1768643274/WhatsApp_Image_2026-01-17_at_15.13.52_mtjplz.jpg"
-                  alt="Mr. Vishal Begnehal" fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              <div className="p-5 text-center">
-                <h3 className="font-semibold text-[#0b3c7d]">OIC Student Activities</h3>
-                <p className="text-2xl font-bold text-[#003f87] transition">Dr. Vishal Begnehal</p>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -134,29 +100,69 @@ export default function TeamPage() {
             ))}
           </div>
         </section>
-
-        {/* ================= CARETAKERS ================= */}
+        {/* ================= STAFF ADMIN ================= */}
         <section className="max-w-7xl mx-auto mb-24">
+          <h2 className="text-3xl font-extrabold text-center text-[#0b3c7d] mb-12">
+            Staff Student Affairs Administration
+          </h2>
+
+          {/* AR */}
+          <div className="max-w-sm mx-auto mb-16 bg-white rounded-2xl shadow-md overflow-hidden">
+            <div className="relative w-full aspect-[4/5]">
+              <Image src="/assistant registrar final.png" alt="AR" fill className="object-cover" />
+            </div>
+            <div className="p-5 text-center">
+              <h3 className="font-semibold text-[#0b3c7d]">Assistant Registrar</h3>
+              <p className="text-2xl font-bold text-[#003f87]">Dr. R P Prajapat</p>
+            </div>
+          </div>
+
+          {/* 4 PEOPLE BELOW AR */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+            {[
+            { name: "Mr.Raj Srivastava", role: "Assistant Sports Officer", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774935146/WhatsApp_Image_2026-03-30_at_16.44.00_colwrf.jpg" },
+{ name: "Mr. Himanshu Kumar", role: "Administrative Assistant", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774933803/WhatsApp_Image_2026-03-30_at_17.07.43_s60df9.jpg" },
+{ name: "Mr. Vishal Bagnehal", role: "Administrative Assistant", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1768643274/WhatsApp_Image_2026-01-17_at_15.13.52_mtjplz.jpg" },
+{ name: "Mr. Rohit Dogra", role: "Administrative Assistant", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774933803/WhatsApp_Image_2026-03-30_at_16.44.00_1_qiqsft.jpg" }
+            ].map((m, i) => (
+              <div key={i} className="group bg-white rounded-2xl shadow-md overflow-hidden">
+                <div className="relative w-full aspect-[4/5]">
+                  <Image src={m.img} alt={m.name} fill className="object-cover" />
+                </div>
+                <div className="p-5 text-center">
+                  <h3 className="font-semibold text-[#0b3c7d]">{m.role}</h3>
+<p className="text-lg font-bold text-[#0b3c7d]">{m.name}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CARETAKERS */}
+         
           <h2 className="text-3xl font-extrabold text-center text-[#0b3c7d] mb-12">
             Caretakers
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
             {[
-              { name: "Mr. Md. Tabrej", hostel: "Braeg Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709242/tabrej_ezvlc2.png" },
+              { name: "Ankush Chaudhary", hostel: "Anz Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774933803/WhatsApp_Image_2026-03-30_at_17.13.02_jf2j8k.jpg" },
+              { name: "Mr. Md. Tabrej", hostel: "Braeg Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774933803/WhatsApp_Image_2026-03-30_at_16.44.01_vboecb.jpg" },
+               { name: "Irfan Ahmad Teli", hostel: "Canary Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709277/irfan_plq41j.jpg" },
               { name: "Tasaduq Gul", hostel: "Dedhar Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709332/caretaker_dedhar_nb0d5l.jpg" },
+              { name: "Ms. Pooja Devi", hostel: "Egret Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774933802/WhatsApp_Image_2026-03-30_at_16.44.01_1_rvolqn.jpg" },
               { name: "Majid Bashir", hostel: "Fulgar Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709377/majid_jvbkdo.jpg" },
-              { name: "Ms. Pooja Devi", hostel: "Egret Hostel", img: "/hostels/egret-caretaker.jpg" },
-              { name: "Irfan Ahmad Teli", hostel: "Canary Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709277/irfan_plq41j.jpg" }
+              { name: "Anish Koul", hostel: "Fulgar Hostel", img: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709299/anish_jfjwap.jpg" }
+              
+             
+              
             ].map((member, i) => (
-              // Caretakers have no profile links — hover animation only
-              <div key={i} className="group bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]">
+              <div key={i} className="group bg-white rounded-2xl shadow-md overflow-hidden">
                 <div className="relative w-full aspect-[4/5]">
-                  <Image src={member.img} alt={member.name} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
+                  <Image src={member.img} alt={member.name} fill className="object-cover" />
                 </div>
                 <div className="p-5 text-center">
                   <h3 className="font-semibold text-[#0b3c7d]">{member.hostel}</h3>
-                  <p className="text-lg font-bold text-[#0b3c7d] mt-1">{member.name}</p>
+                  <p className="text-lg font-bold text-[#0b3c7d]">{member.name}</p>
                 </div>
               </div>
             ))}
@@ -215,6 +221,7 @@ export default function TeamPage() {
             ))}
           </div>
         </section>
+
       </div>
 
       <Footer />
