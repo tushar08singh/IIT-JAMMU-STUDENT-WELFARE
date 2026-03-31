@@ -357,7 +357,7 @@ export default function Page() {
                 {/* LEFT */}
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Person In-Charge</h3>
+                    <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Professor In-Charge</h3>
                     {clubPICs.map((p, i) => (
                       <a
   

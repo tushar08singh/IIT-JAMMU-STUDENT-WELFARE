@@ -333,7 +333,7 @@ export default function Page() {
               {/* PIC + Coordinators */}
               <div>
                 <h3 className="text-2xl font-semibold text-[#003f87] mb-4">
-                  Person In-Charge
+                  Professor In-Charge
                 </h3>
                 {clubPICs.map((p, i) => (
                   <a

@@ -17,7 +17,7 @@ const clubs = [
 ];
 
 const coordinators = [
-  { name: "Yash Agarwal", photo: "/nac coordinator.jpeg", club: "Nature and Adventure Club" },
+  { name: "Yash Agarwal", photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774956278/Screenshot_2026-03-31_165358_zhrrkw.png", club: "Nature and Adventure Club" },
   { name: "Radhika Verma", photo: "/nac co-coordinator.jpeg", club: "Nature and Adventure Club", role: "Co-Coordinator" },
   { name: "Aditya Pratap Singh", photo: "/kritash coordinator-1.jpg", club: "Kritash Club" },
   { name: "Arshpreet Kaur", photo: "/kritash coordinator-2.jpg", club: "Kritash Club" },
@@ -30,9 +30,9 @@ const coordinators = [
 const PICs = [
   { name: "Dr. Shafkat Shafi Dar", photo: "/PIC nac.jpg", club: "Nature and Adventure Club",profile:"https://iitjammu.ac.in/faculty/~shafkatshafidar" },
   { name: "Dr. Sanchita Srivastava", photo: "/PIC kritash.jpg", club: "Kritash Club",profile:"https://iitjammu.ac.in/faculty/~sanchitasrivastava" },
-  { name: "Dr. Chandan Yadav", photo: "/PIC re4m.jpg", club: "RE4M Club",profile:"https://www.iitjammu.ac.in/faculty/~chandanyadav" },
+  { name: "Dr. Chandan Yadav", photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774956477/1704698341656_zf3tb5.jpg", club: "RE4M Club",profile:"https://www.iitjammu.ac.in/faculty/~chandanyadav" },
   { name: "Dr. Mithu Baidya", photo: "/PIC mesh.jpeg", club: "Mesh Club",profile:"https://www.iitjammu.ac.in/bsbe/faculty.html?faculty=~mithubaidya" },
-  { name: "Dr. Srishilan C", photo: "/PIC music.jpeg", club: "Ek Bharat Shreshtha Bharat" ,profile:"https://www.iitjammu.ac.in/faculty/~srishilanc"},
+  { name: "Dr. Srishilan C", photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774956399/images_yeiytj.jpg", club: "Ek Bharat Shreshtha Bharat" ,profile:"https://www.iitjammu.ac.in/faculty/~srishilanc"},
   { name: "Dr. Kishore Kumar Jagini", photo: "/PIC wellbeing.jpeg", club: "Wellbeing Club",profile:"https://www.iitjammu.ac.in/hss/faculty.html?faculty=~kishorekumarjagini" }
 ];
 
@@ -327,7 +327,7 @@ export default function Page() {
             <div className="p-6 max-h-[70vh] overflow-y-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
 
               <div>
-                <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Person In-Charge</h3>
+                <h3 className="text-2xl font-semibold text-[#003f87] mb-4">Professor In-Charge</h3>
                 {clubPICs.map((p, i) => (
                   <a
   
