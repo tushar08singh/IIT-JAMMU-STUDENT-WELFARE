@@ -77,12 +77,12 @@ const secretary = {
 
 export default function Page() {
   const heroImages = [
-      "/hero9.jpg",
-      "/hero10.jpg",
-      "/hero11.jpg",
-      "/hero14.jpg",
-      "/hero12.jpg",
-      "/hero13.jpg",
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774950088/0f0e36fa-95b8-4abf-aa7b-97cc372cf560_qpkok6.jpg",
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774950086/DSC07662_ws4wcm.jpg",
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774950087/IMG_1005_wgtbhc.jpg",
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1775559506/IMG_1882_lxk0sj.jpg",
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774950087/2b460805-be4e-48cb-92c3-6d5f168e71df_vaidw8.jpg",
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774951590/IMG_20250928_000137125_HDR_epm8ag.jpg",
       //"/hero6.jpg",
       
     ];
