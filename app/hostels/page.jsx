@@ -10,6 +10,29 @@ import PdfSlideshow from "../components/PdfSlideshow";
 /* ================= DATA ================= */
 
 const hostels = [
+
+  {
+    name: "Anz Hostel (Boys)",
+    image:
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1782053498/Screenshot_2026-06-21_201701_uxe8ek.png",
+    warden: {
+      name: "Dr. Guru Brahmam Ramani",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1782053652/1707973890935_gjqpa7.jpg",
+      email: "warden.egret@iitjammu.ac.in",
+    },
+    secretary: {
+     name: "Mehul Gupta",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
+      email: "hsec.boys@iitjammu.ac.in",
+    },
+    caretaker: {
+      name: "Mr. Ankush Kumar",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1782053795/DR_Ankush_m3qpsx.jpg",
+      email: "caretaker.egret@iitjammu.ac.in",
+    },
+  },
   {
     name: "Fulgar Hostel (Boys)",
     image:
@@ -33,9 +56,9 @@ const hostels = [
       email: "caretaker.fulgar@iitjammu.ac.in",
     },
     extraCaretaker: {
-      name: "Anish Koul",
+      name: "Tabrez",
       photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709299/anish_jfjwap.jpg",
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774933803/WhatsApp_Image_2026-03-30_at_16.44.01_vboecb.jpg",
       email: "caretaker.fulgar@iitjammu.ac.in",
     },
     wellnessWarden: {
@@ -65,7 +88,7 @@ const hostels = [
     },
     caretaker: {
       name: "Ms. Pooja Devi",
-      photo: "/hostels/egret-caretaker.jpg",
+      photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774933802/WhatsApp_Image_2026-03-30_at_16.44.01_1_rvolqn.jpg",
       email: "caretaker.egret@iitjammu.ac.in",
     },
   },
@@ -94,10 +117,10 @@ const hostels = [
       email: "sumit.ghosh@iitjammu.ac.in",
     },
     caretaker: {
-      name: "Mr. Md. Tabrej",
+      name: "Anish Koul",
       photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709242/tabrej_ezvlc2.png",
-      phone: "+91 8875875803",
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709299/anish_jfjwap.jpg",
+      // phone: "+91 8875875803",
       email: "caretaker.braeg@iitjammu.ac.in",
     },
     attendant: {

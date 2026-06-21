@@ -12,31 +12,31 @@ const messes = [
   {
     name: "Annapurna Mess (2nd Floor)",
     location: "Fulgar – 1C",
-    capacity: "450+ students",
+    capacity: "360 students",
     image: "https://res.cloudinary.com/dabviijid/image/upload/v1774694949/DSCF3139.JPG_dhofqc.jpg",
   },
   {
     name: "Annapurna Mess (3rd Floor)",
     location: "Fulgar – 1C",
-    capacity: "450+ students",
+    capacity: "360 students",
     image: "https://res.cloudinary.com/dabviijid/image/upload/v1774694949/DSCF3147.JPG_gb4kfv.jpg",
   },
   {
     name: "Egret Mess",
     location: "1B",
-    capacity: "300+ students",
+    capacity: "470 students",
     image: "https://res.cloudinary.com/dabviijid/image/upload/v1774694949/DSCF3178.JPG_jhfjly.jpg",
   },
   {
     name: "Canary Mess",
     location: "L-112",
-    capacity: "400+ students",
+    capacity: "240 students",
     image: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774081543/WhatsApp_Image_2026-03-21_at_12.53.37_m1lmqn.jpg",
   },
   {
     name: "Dedhar Mess",
     location: "L-120",
-    capacity: "350+ students",
+    capacity: "240 students",
     image: "https://res.cloudinary.com/dabviijid/image/upload/v1774694949/DSCF3167.JPG_phxc3y.jpg",
   },
 ];
