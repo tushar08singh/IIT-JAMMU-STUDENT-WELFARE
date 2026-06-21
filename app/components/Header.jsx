@@ -189,7 +189,7 @@ const Header = () => {
         }
         .desktop-nav {
           display:flex; justify-content:center; flex-wrap:wrap;
-          gap:2px; padding:9px 32px 11px; position:relative;
+          gap:2px; padding:4px 32px 5px; position:relative;
         }
         .nav-link {
           position:relative; font-size:0.78rem; font-weight:400;

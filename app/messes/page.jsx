@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import PdfSlideshow from "../components/PdfSlideshow";
 
 /* ================= DATA ================= */
 
@@ -92,6 +93,11 @@ export default function Page() {
         <h1 className="text-center text-4xl font-bold text-[#003f87] mb-6">
           Our Messes
         </h1>
+        <PdfSlideshow
+                  pdfUrl="https://res.cloudinary.com/dabviijid/image/upload/v1782030054/Mess_Infrastructure_Details_kjxkux.pdf"
+                  driveUrl="https://drive.google.com/file/d/1OExSfM-XZd5o9Q31SEb4M75w8aexxzuU/view?usp=drive_link"
+                  title="Mess Infrastructure & Details"
+                />
 
         {/* ── Common Timings Banner ── */}
         <div className="max-w-2xl mx-auto mb-12 px-6">

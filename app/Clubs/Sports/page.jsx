@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { FaInstagram } from 'react-icons/fa'
+import PdfSlideshow from "../../components/PdfSlideshow";
 
 
 const clubs = [
@@ -201,6 +202,7 @@ const goToSlide = (index) => { stopAutoplay(); setCurrentSlide(index) }
       <Header />
 
      {/* SLIDESHOW — replaces logo card */}
+     
 <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] overflow-hidden">
   {heroImages.map((src, index) => (
     <Image
@@ -246,7 +248,11 @@ const goToSlide = (index) => { stopAutoplay(); setCurrentSlide(index) }
     ))}
   </div>
 </div>
-
+<PdfSlideshow
+                  pdfUrl="https://res.cloudinary.com/dabviijid/image/upload/v1782030226/Sports_Infrastructure_Details_al7nk0.pdf"
+                  driveUrl="https://drive.google.com/file/d/1WMJgm0D_VJr0a2OrjgiS-FtGkQ9_ZV5v/view?usp=drive_link"
+                  title="Sports Infrastructure & Details"
+                />
       {/* Secretary */}
       {/* ASSOCIATE DEAN + SPORTS SECRETARY */}
       
@@ -376,6 +382,7 @@ const goToSlide = (index) => { stopAutoplay(); setCurrentSlide(index) }
 
         </div>
       </div>
+      
       {/* Clubs */}
       <section className="bg-blue-50 mt-20 py-16">
         <h2 className="text-center text-4xl font-bold text-[#003f87] mb-12">

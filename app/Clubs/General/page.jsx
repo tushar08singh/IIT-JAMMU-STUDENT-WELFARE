@@ -4,6 +4,7 @@ import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaInstagram } from "react-icons/fa";
+import PdfSlideshow from "../../components/PdfSlideshow";
 
 /* -------------------- DATA -------------------- */
 
@@ -199,7 +200,11 @@ export default function Page() {
       {/* HERO */}
       {/* LOGO CARD */}
 
-
+<PdfSlideshow
+                  pdfUrl="https://res.cloudinary.com/dabviijid/image/upload/v1782030054/Student_Club_Activities_m39twc.pdf"
+                  driveUrl="https://drive.google.com/file/d/1H9ttrd9DSwLX9kXsQ-mUQByy6UJV_iyu/view?usp=drive_link"
+                  title="Student Club Activities"
+                />
       {/* ASSOCIATE DEAN + SECRETARY */}
       <div className="max-w-6xl mx-auto mt-16 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

@@ -5,136 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import PdfSlideshow from "../components/PdfSlideshow";
 
 /* ================= DATA ================= */
 
 const hostels = [
-   {
-    name: "Anz Hostel (Boys)",
-    image:
-      "https://res.cloudinary.com/dabviijid/image/upload/v1774904857/1501839985phpFufwFq_xewpcd.jpg",
-    warden: {
-      name: "Dr. Guru B. Ramani",
-      photo:
-        "https://res.cloudinary.com/dabviijid/image/upload/v1774905217/1707973890935_dqdgwz.jpg",
-      email: "warden.anz@iitjammu.ac.in",
-    },
-    secretary: {
-      name: "Mehul Gupta",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
-      email: "hsec.boys@iitjammu.ac.in",
-    },
-    
-  },
-    {
-    name: "Braeg Hostel (Boys)",
-    image:
-      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091838/WhatsApp_Image_2026-03-21_at_16.46.37_wthdth.jpg",
-    warden: {
-      name: "Dr. Ved Prakash Ranjan",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747072/Ved_Prakash_jiuzku.png",
-      email: "warden.braeg@iitjammu.ac.in",
-    },
-    secretary: {
-      name: "Mehul Gupta",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
-      email: "hsec.boys@iitjammu.ac.in",
-    },
-    wellnessWarden: {
-      name: "Mr. Sumit Raj Ghosh",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709345/sumit_kikdod.jpg",
-      //phone: "+91 9709111227",
-      email: "sumit.ghosh@iitjammu.ac.in",
-    },
-    caretaker: {
-      name: "Mr. Md. Tabrej",
-      photo:
-        "https://res.cloudinary.com/dabviijid/image/upload/v1774905386/WhatsApp_Image_2026-03-30_at_4.51.17_PM_g9cxep.jpg",
-     // phone: "+91 8875875803",
-      email: "caretaker.braeg@iitjammu.ac.in",
-    },
-    attendant: {
-      name: "Mr. Ajay Kumar",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709026/ajay_hx6u5j.png",
-     // phone: "+91 9858145319",
-    },
-  },
-   {
-    name: "Canary Hostel (Boys)",
-    image:
-      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091914/IMG_5802_qenuqc.jpg",
-    warden: {
-      name: "Akash Awale",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709263/akash_a5ntu2.jpg",
-      email: "warden.canary@iitjammu.ac.in",
-    },
-    secretary: {
-      name: "Mehul Gupta",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
-      email: "hsec.boys@iitjammu.ac.in",
-    },
-    caretaker: {
-      name: "Irfan Ahmad Teli",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709277/irfan_plq41j.jpg",
-      //phone: "+91 6005257797",
-      email: "caretaker.canary@iitjammu.ac.in",
-    },
-  },
-  
-  {
-    name: "Dedhar Hostel (Girls)",
-    image:
-      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774186976/WhatsApp_Image_2026-03-22_at_18.22.29_m3vqyf.jpg",
-    warden: {
-      name: "Dr. Garima Singh",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709322/warden_dedhar_f7n6dg.jpg",
-      email: "warden.dedhar@iitjammu.ac.in",
-    },
-    secretary: {
-      name: "Mishthi Agarwal",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg",
-      email: "hsec.girls@iitjammu.ac.in",
-    },
-    caretaker: {
-      name: "Tasaduq Gul",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709332/caretaker_dedhar_nb0d5l.jpg",
-      email: "caretaker.dedhar@iitjammu.ac.in",
-    },
-  },
-  
-  {
-    name: "Egret Hostel (Girls)",
-    image:
-      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774092815/IMG-20260320-WA0004.jpg_mg1dal.jpg",
-    warden: {
-      name: "Dr. Riya Bhowmik",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709311/warden_egret_kbovjx.jpg",
-      email: "warden.egret@iitjammu.ac.in",
-    },
-    secretary: {
-      name: "Mishthi Agarwal",
-      photo:
-        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg",
-      email: "hsec.girls@iitjammu.ac.in",
-    },
-    caretaker: {
-      name: "Ms. Pooja Devi",
-      photo: "https://res.cloudinary.com/dabviijid/image/upload/v1774905385/WhatsApp_Image_2026-03-30_at_4.51.18_PM_sqopsp.jpg",
-      email: "caretaker.egret@iitjammu.ac.in",
-    },
-  },
   {
     name: "Fulgar Hostel (Boys)",
     image:
@@ -167,17 +42,120 @@ const hostels = [
       name: "Sumit Raj Ghosh",
       photo:
         "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709345/sumit_kikdod.jpg",
-     // phone: "+91 9709111227",
+      phone: "+91 9709111227",
       email: "sumit.ghosh@iitjammu.ac.in",
     },
   },
 
+  {
+    name: "Egret Hostel (Girls)",
+    image:
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774092815/IMG-20260320-WA0004.jpg_mg1dal.jpg",
+    warden: {
+      name: "Dr. Riya Bhowmik",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709311/warden_egret_kbovjx.jpg",
+      email: "warden.egret@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mishthi Agarwal",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg",
+      email: "hsec.girls@iitjammu.ac.in",
+    },
+    caretaker: {
+      name: "Ms. Pooja Devi",
+      photo: "/hostels/egret-caretaker.jpg",
+      email: "caretaker.egret@iitjammu.ac.in",
+    },
+  },
 
+  {
+    name: "Braeg Hostel (Boys)",
+    image:
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091838/WhatsApp_Image_2026-03-21_at_16.46.37_wthdth.jpg",
+    warden: {
+      name: "Dr. Ved Prakash Ranjan",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771747072/Ved_Prakash_jiuzku.png",
+      email: "warden.braeg@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mehul Gupta",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
+      email: "hsec.boys@iitjammu.ac.in",
+    },
+    wellnessWarden: {
+      name: "Mr. Sumit Raj Ghosh",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709345/sumit_kikdod.jpg",
+      phone: "+91 9709111227",
+      email: "sumit.ghosh@iitjammu.ac.in",
+    },
+    caretaker: {
+      name: "Mr. Md. Tabrej",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709242/tabrej_ezvlc2.png",
+      phone: "+91 8875875803",
+      email: "caretaker.braeg@iitjammu.ac.in",
+    },
+    attendant: {
+      name: "Mr. Ajay Kumar",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709026/ajay_hx6u5j.png",
+      phone: "+91 9858145319",
+    },
+  },
 
+  {
+    name: "Dedhar Hostel (Girls)",
+    image:
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774186976/WhatsApp_Image_2026-03-22_at_18.22.29_m3vqyf.jpg",
+    warden: {
+      name: "Dr. Garima Singh",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709322/warden_dedhar_f7n6dg.jpg",
+      email: "warden.dedhar@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mishthi Agarwal",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_girls_vqu4zr.jpg",
+      email: "hsec.girls@iitjammu.ac.in",
+    },
+    caretaker: {
+      name: "Tasaduq Gul",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709332/caretaker_dedhar_nb0d5l.jpg",
+      email: "caretaker.dedhar@iitjammu.ac.in",
+    },
+  },
 
-
-
- 
+  {
+    name: "Canary Hostel (Boys)",
+    image:
+      "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774091914/IMG_5802_qenuqc.jpg",
+    warden: {
+      name: "Akash Awale",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709263/akash_a5ntu2.jpg",
+      email: "warden.canary@iitjammu.ac.in",
+    },
+    secretary: {
+      name: "Mehul Gupta",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1767941863/hostel_secretary_boys_ew5mqj.jpg",
+      email: "hsec.boys@iitjammu.ac.in",
+    },
+    caretaker: {
+      name: "Irfan Ahmad Teli",
+      photo:
+        "https://res.cloudinary.com/dveqd1vm1/image/upload/v1771709277/irfan_plq41j.jpg",
+      phone: "+91 6005257797",
+      email: "caretaker.canary@iitjammu.ac.in",
+    },
+  },
 ];
 
 /* ================= PAGE ================= */
@@ -196,6 +174,11 @@ export default function Page() {
           </h2>
           <div className="w-24 h-1 bg-[#003f87] mx-auto mt-3 rounded-full" />
         </div>
+          <PdfSlideshow
+          pdfUrl="https://res.cloudinary.com/dabviijid/image/upload/v1782030054/Hostel_Infrastructure_Details_b5kbmv.pdf"
+          driveUrl="https://drive.google.com/file/d/1WwLhj1XQQO-zILP6D38ZCeysFEbrhdcG/view?usp=drive_link"
+          title="Hostel Infrastructure & Details"
+        />
 
         {/* ===== ADMIN BIG CARD ===== */}
         <div className="max-w-6xl mx-auto mt-16 px-4 mb-10">
@@ -203,7 +186,7 @@ export default function Page() {
 
             {/* Clickable AD Hostel card */}
             <Link
-              href="https://iitjammu.ac.in/chemical-engineering/faculty.html?faculty=~yogeshmadhukarraonimdeo"
+              href="https://www.iitjammu.ac.in/faculty/details?id=yogesh.nimdeo"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative bg-blue-50 rounded-xl p-8 text-center shadow transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer no-underline"
@@ -222,7 +205,7 @@ export default function Page() {
                 </div>
 
                 {/* Name with underline on hover */}
-                <h2 className="text-2xl font-bold text-[#003f87] inline-block border-b-3 border-transparent group-hover:border-[#003f87] transition-all duration-300">
+                <h2 className="text-2xl font-bold text-[#003f87] inline-block border-b-2 border-transparent group-hover:border-[#003f87] transition-all duration-300">
                   Dr. Yogesh Madhukarrao Nimdeo
                 </h2>
 
@@ -234,6 +217,9 @@ export default function Page() {
 
           </div>
         </div>
+
+        {/* ===== HOSTEL INFRASTRUCTURE PDF SLIDESHOW ===== */}
+      
 
         {/* HOSTELS */}
         <div className="max-w-6xl mx-auto space-y-10 px-6">

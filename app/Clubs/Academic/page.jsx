@@ -5,6 +5,8 @@ import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FaInstagram } from "react-icons/fa";
+import PdfSlideshow from "../../components/PdfSlideshow";
+
 
 /* -------------------- DATA -------------------- */
 
@@ -202,6 +204,11 @@ export default function Page() {
           {/* Navbar */}
           
         </div>
+        <PdfSlideshow
+                          pdfUrl="https://res.cloudinary.com/dabviijid/image/upload/v1782030054/Student_Club_Activities_m39twc.pdf"
+                          driveUrl="https://drive.google.com/file/d/1H9ttrd9DSwLX9kXsQ-mUQByy6UJV_iyu/view?usp=drive_link"
+                          title="Student Club Activities"
+                        />
 
       {/* ASSOCIATE DEAN + SECRETARY */}
      {/* ASSOCIATE DEAN + SECRETARY */}
