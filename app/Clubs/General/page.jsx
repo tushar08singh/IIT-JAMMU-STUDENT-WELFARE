@@ -29,12 +29,12 @@ const coordinators = [
 ];
 
 const PICs = [
-  { name: "Dr. Shafkat Shafi Dar", photo: "/PIC nac.jpg", club: "Nature and Adventure Club",profile:"https://iitjammu.ac.in/faculty/~shafkatshafidar" },
+  { name: "Dr. Shafkat Shafi Dar", photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1782563574/1702286732825_twhypa.jpg", club: "Nature and Adventure Club",profile:"https://iitjammu.ac.in/faculty/~shafkatshafidar" },
   { name: "Dr. Sanchita Srivastava", photo: "/PIC kritash.jpg", club: "Kritash Club",profile:"https://iitjammu.ac.in/faculty/~sanchitasrivastava" },
   { name: "Dr. Chandan Yadav", photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774956477/1704698341656_zf3tb5.jpg", club: "RE4M Club",profile:"https://www.iitjammu.ac.in/faculty/~chandanyadav" },
   { name: "Dr. Mithu Baidya", photo: "/PIC mesh.jpeg", club: "Mesh Club",profile:"https://www.iitjammu.ac.in/bsbe/faculty.html?faculty=~mithubaidya" },
   { name: "Dr. Srishilan C", photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1774956399/images_yeiytj.jpg", club: "Ek Bharat Shreshtha Bharat" ,profile:"https://www.iitjammu.ac.in/faculty/~srishilanc"},
-  { name: "Dr. Kishore Kumar Jagini", photo: "/PIC wellbeing.jpeg", club: "Wellbeing Club",profile:"https://www.iitjammu.ac.in/hss/faculty.html?faculty=~kishorekumarjagini" }
+  { name: "Dr. Ravikant Saini", photo: "https://res.cloudinary.com/dveqd1vm1/image/upload/v1782563506/ravikant_roll5s.jpg", club: "Wellbeing Club",profile:"https://www.iitjammu.ac.in/ee/faculty.html?faculty=~ravikantsaini" }
 ];
 
 const clubVisionMission = {
